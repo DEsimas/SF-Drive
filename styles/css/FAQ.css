@@ -1,5 +1,13 @@
 @font-face {
-  src: url("../fonts/Roboto-Light.ttf");
+  src: url("../../fonts/Roboto-Light.ttf");
+  font-family: "Roboto"; }
+
+@font-face {
+  src: url("../../fonts/Roboto-Medium.ttf");
+  font-family: "Roboto500"; }
+
+@font-face {
+  src: url("../../fonts/Roboto-Light.ttf");
   font-family: "Roboto"; }
 
 @font-face {
@@ -59,12 +67,61 @@
         margin-left: 40px; } }
 
 @font-face {
-  src: url("../fonts/Roboto-Light.ttf");
+  src: url("../../fonts/Roboto-Light.ttf");
   font-family: "Roboto"; }
 
 @font-face {
   src: url("../../fonts/Roboto-Medium.ttf");
   font-family: "Roboto500"; }
+
+.footer {
+  margin-top: 50px;
+  height: 125px;
+  background: #3F3D56;
+  display: flex;
+  flex-direction: column; }
+  .footer span {
+    margin-top: 30px;
+    margin-left: 18px;
+    font-size: 16px;
+    line-height: 19px;
+    color: white;
+    opacity: 0.4;
+    font-family: 'Roboto'; }
+  .footer-socials {
+    margin-top: 17px;
+    margin-left: 23px; }
+    .footer-socials a {
+      margin-right: 19px;
+      text-decoration: none; }
+  @media screen and (min-width: 600px) {
+    .footer {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 120px; }
+      .footer span {
+        font-size: 16px;
+        margin: 0px;
+        margin-left: 40px;
+        margin-top: 53px;
+        margin-bottom: 52px; }
+      .footer-socials {
+        margin: 0px;
+        margin-right: 46px;
+        margin-top: 46px;
+        margin-bottom: 46px; }
+        .footer-socials a {
+          margin: 0px;
+          margin-left: 16px; } }
+
+button:focus {
+  outline: none; }
+
+html {
+  margin: 0px; }
+
+body {
+  margin: 0px; }
 
 main {
   margin-top: 60px;
@@ -89,7 +146,7 @@ main {
       text-align: center; }
       main-section-text p {
         font-family: 'Roboto';
-        Font-size: 16px;
+        font-size: 16px;
         line-height: 147.3%;
         margin: 0px;
         margin-top: 10px; }
@@ -142,7 +199,7 @@ main {
     text-align: center; }
     main p {
       font-size: 20px;
-      font-style: "Roboto"; }
+      font-family: 'Roboto'; }
     main h1 {
       font-size: 64px;
       margin-top: 60px; }
@@ -156,61 +213,13 @@ main {
         font-size: 24px; }
       main-section-questions {
         margin-top: 60px; }
-        main-section-questions button:hover {
-          background-color: rgba(97, 161, 153, 0.15); }
         main-section-questions button span {
           font-size: 20px; }
     main .butText {
       font-size: 20px; }
+    main .btn:hover {
+      background-color: rgba(97, 161, 153, 0.15); }
     main .answ {
       text-align: left;
       font-size: 20px;
       margin-bottom: 40px; } }
-
-@font-face {
-  src: url("../fonts/Roboto-Light.ttf");
-  font-family: "Roboto"; }
-
-@font-face {
-  src: url("../../fonts/Roboto-Medium.ttf");
-  font-family: "Roboto500"; }
-
-.footer {
-  margin-top: 50px;
-  height: 125px;
-  background: #3F3D56;
-  display: flex;
-  flex-direction: column; }
-  .footer span {
-    margin-top: 30px;
-    margin-left: 18px;
-    font-size: 16px;
-    line-height: 19px;
-    color: #FFFFFF;
-    opacity: 0.4;
-    font-family: 'Roboto'; }
-  .footer-socials {
-    margin-top: 17px;
-    margin-left: 23px; }
-    .footer-socials a {
-      margin-right: 19px;
-      text-decoration: none; }
-  @media screen and (min-width: 600px) {
-    .footer {
-      flex-direction: row;
-      justify-content: space-between;
-      margin-top: 120px; }
-      .footer span {
-        font-size: 16px;
-        margin: 0px;
-        margin-left: 40px;
-        margin-top: 53px;
-        margin-bottom: 52px; }
-      .footer-socials {
-        margin: 0px;
-        margin-right: 46px;
-        margin-top: 46px;
-        margin-bottom: 46px; }
-        .footer-socials a {
-          margin: 0px;
-          margin-left: 16px; } }
