@@ -66,6 +66,115 @@
   src: url("../../fonts/Roboto-Medium.ttf");
   font-family: "Roboto500"; }
 
+main {
+  margin-top: 60px;
+  margin-left: 20px;
+  margin-right: 20px; }
+  main h1 {
+    font-family: 'Roboto';
+    font-size: 32px;
+    line-height: 120%;
+    color: #1B1B1B;
+    margin: 0px;
+    margin-top: 40px; }
+  main-img {
+    display: flex;
+    justify-content: center; }
+    main-img img {
+      height: 202px;
+      width: 242px; }
+  main-section {
+    margin-top: 40px; }
+    main-section-text {
+      text-align: center; }
+      main-section-text p {
+        font-family: 'Roboto';
+        Font-size: 16px;
+        line-height: 147.3%;
+        margin: 0px;
+        margin-top: 10px; }
+    main-section-questions {
+      margin-top: 30px; }
+      main-section-questions button {
+        background: #F7F7F8;
+        border-radius: 6px;
+        width: 100%; }
+        main-section-questions button span {
+          font-family: 'Roboto';
+          font-size: 14px;
+          line-height: 147.3%;
+          color: #1B1B1B; }
+  main .btn {
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    border: none;
+    text-align: left;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px; }
+  main .arrowUp {
+    display: none; }
+  main .answ {
+    display: none; }
+  main .button-content {
+    display: flex;
+    justify-content: space-between; }
+  main .btn6 {
+    margin-bottom: 0px; }
+  main .answ {
+    font-family: 'Roboto';
+    font-size: 14px;
+    line-height: 147.3%;
+    color: #1B1B1B;
+    margin: 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 30px; }
+
+@media screen and (min-width: 600px) {
+  main {
+    margin-top: 110px;
+    margin-left: 205px;
+    margin-right: 205px;
+    text-align: center; }
+    main p {
+      font-size: 20px;
+      font-style: "Roboto"; }
+    main h1 {
+      font-size: 64px;
+      margin-top: 60px; }
+    main .main-img img {
+      height: 300px;
+      width: 360px; }
+    main-section {
+      margin-top: 60px; }
+      main-section-text p {
+        margin-top: 30px;
+        font-size: 24px; }
+      main-section-questions {
+        margin-top: 60px; }
+        main-section-questions button:hover {
+          background-color: rgba(97, 161, 153, 0.15); }
+        main-section-questions button span {
+          font-size: 20px; }
+    main .butText {
+      font-size: 20px; }
+    main .answ {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 40px; } }
+
+@font-face {
+  src: url("../fonts/Roboto-Light.ttf");
+  font-family: "Roboto"; }
+
+@font-face {
+  src: url("../../fonts/Roboto-Medium.ttf");
+  font-family: "Roboto500"; }
+
 .footer {
   margin-top: 50px;
   height: 125px;
