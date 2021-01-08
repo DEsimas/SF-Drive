@@ -1,0 +1,107 @@
+@font-face {
+  src: url("../fonts/Roboto-Light.ttf");
+  font-family: "Roboto"; }
+
+@font-face {
+  src: url("../../fonts/Roboto-Medium.ttf");
+  font-family: "Roboto500"; }
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center; }
+  .header nav {
+    display: none; }
+  .header button {
+    display: none; }
+  .header-logo {
+    margin-left: 20px; }
+  .header-right-burger {
+    margin-right: 23; }
+  @media screen and (min-width: 600px) {
+    .header {
+      margin-top: 30px; }
+      .header nav {
+        display: inline; }
+      .header-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center; }
+        .header-right-nav a {
+          font-family: 'Roboto';
+          text-decoration: none;
+          font-size: 16px;
+          line-height: 19px;
+          color: #1B1B1B;
+          margin-top: 0px;
+          margin-bottom: 0px;
+          margin-left: 30px;
+          margin-right: 0px; }
+        .header-right-btn {
+          margin-left: 40px;
+          border: solid grey 1px;
+          border-radius: 6px;
+          background-color: white;
+          font-family: 'Roboto500';
+          font-size: 16px;
+          line-height: 19px;
+          color: #1B1B1B;
+          padding: 10px 20px;
+          cursor: pointer;
+          margin-right: 40px; }
+        .header-right-burger {
+          display: none; }
+      .header button {
+        display: inline;
+        margin-left: 45px; }
+      .header-logo {
+        margin-left: 40px; } }
+
+@font-face {
+  src: url("../fonts/Roboto-Light.ttf");
+  font-family: "Roboto"; }
+
+@font-face {
+  src: url("../../fonts/Roboto-Medium.ttf");
+  font-family: "Roboto500"; }
+
+.footer {
+  margin-top: 50px;
+  height: 125px;
+  background: #3F3D56;
+  display: flex;
+  flex-direction: column; }
+  .footer span {
+    margin-top: 30px;
+    margin-left: 18px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    opacity: 0.4;
+    font-family: 'Roboto'; }
+  .footer-socials {
+    margin-top: 17px;
+    margin-left: 23px; }
+    .footer-socials a {
+      margin-right: 19px;
+      text-decoration: none; }
+  @media screen and (min-width: 600px) {
+    .footer {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 120px; }
+      .footer span {
+        font-size: 16px;
+        margin: 0px;
+        margin-left: 40px;
+        margin-top: 53px;
+        margin-bottom: 52px; }
+      .footer-socials {
+        margin: 0px;
+        margin-right: 46px;
+        margin-top: 46px;
+        margin-bottom: 46px; }
+        .footer-socials a {
+          margin: 0px;
+          margin-left: 16px; } }
