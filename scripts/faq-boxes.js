@@ -1,3 +1,5 @@
+console.log("script start");
+
 let current = 0;
 
 function show(num) {

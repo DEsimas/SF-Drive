@@ -8,5 +8,9 @@
     "scss": "node-sass --watch styles/scss/ -o styles/css"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.16.0",
+    "webpack-cli": "^4.4.0"
+  }
 }
