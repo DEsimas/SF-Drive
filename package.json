@@ -4,17 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch styles/scss/ -o styles/css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEsimas/SF-Drive.git"
+  },
+  "author": "Serafim <simasuh@gmail.com>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DEsimas/SF-Drive/issues"
+  },
+  "homepage": "https://github.com/DEsimas/SF-Drive#readme",
   "devDependencies": {
-    "css-loader": "^5.0.1",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "style-loader": "^2.0.0",
-    "terser-webpack-plugin": "^5.1.1",
-    "webpack": "^5.16.0",
+    "webpack": "^5.17.0",
     "webpack-cli": "^4.4.0"
   }
 }
