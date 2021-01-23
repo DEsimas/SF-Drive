@@ -1,6 +1,6 @@
 module.exports = {
     entry: './scripts/faq-boxes.js',
-    mode:'development',
+    mode:'production',
     output: {
         filename: 'main.js'
     }
