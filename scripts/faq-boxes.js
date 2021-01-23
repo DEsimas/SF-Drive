@@ -151,3 +151,5 @@ function show(num) {
             break;
     }
 }
+
+window.show = show;
