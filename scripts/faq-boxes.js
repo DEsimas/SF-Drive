@@ -1,3 +1,5 @@
+import './FAQ.css';
+
 console.log("script start");
 
 let current = 0;
