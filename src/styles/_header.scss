@@ -1,0 +1,77 @@
+@import "_variables";
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    
+    nav{
+        display: none;
+    }
+
+    button{
+        display: none;
+    }
+
+    &-logo{
+        margin-left: 20px;
+    }
+
+    &-right-burger{
+        margin-right: 23;
+    }
+
+    @media screen and (min-width: 600px){
+        margin-top: 30px;
+
+        nav{
+            display: inline;
+        }
+
+        &-right{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            &-nav a{
+                font-family: 'Roboto';
+                text-decoration: none;
+                font-size: 16px;
+                line-height: 19px;
+                color: $main-text-color;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                margin-left: 30px;
+                margin-right: 0px;
+            }
+
+            &-btn{
+                margin-left: 40px;
+                border: solid grey 1px;
+                border-radius: 6px;
+                background-color: white;
+                font-family: 'Roboto500';
+                font-size: 16px;
+                line-height: 19px;
+                color: #1B1B1B;
+                padding: 10px 20px;
+                cursor: pointer;
+                margin-right: 40px;
+            }
+
+            &-burger{
+                display: none;
+            }
+        }
+
+        button{
+            display: inline;
+            margin-left: 45px;
+        }
+
+        &-logo{
+            margin-left: 40px;
+        }
+    }
+}
