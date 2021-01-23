@@ -1,3 +1,5 @@
+import './../styles/FAQ.scss'
+
 let current = 0;
 
 function show(num) {
