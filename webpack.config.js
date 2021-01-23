@@ -20,6 +20,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'FAQ.html',
             template: './FAQ.html',
+            chunks: ['FAQ'],
             minify: {
                 collapseWhitespace: !isDev
             }
@@ -28,6 +29,7 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'aboutUs.html',
             template: './aboutUs.html',
+            chunks: ['aboutUs'],
             minify: {
                 collapseWhitespace: !isDev
             }
