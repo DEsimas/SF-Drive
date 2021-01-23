@@ -2,6 +2,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 
+const isDev = process.env.NODE_ENV === 'development'
+
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
@@ -16,12 +18,18 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'FAQ.html',
-            template: './FAQ.html'
+            template: './FAQ.html',
+            minify: {
+                collapseWhitespace: !isDev
+            }
         }),
 
         new HtmlWebpackPlugin({
             filename: 'aboutUs.html',
-            template: './aboutUs.html'
+            template: './aboutUs.html',
+            minify: {
+                collapseWhitespace: !isDev
+            }
         }),
 
         new CleanWebpackPlugin()
