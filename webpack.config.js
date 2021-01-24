@@ -17,6 +17,12 @@ module.exports = {
         filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
+    devServer: {
+        contentBase: './dist',
+        open: true,
+        porn: 3001,
+        hot:isDev
+    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'FAQ.html',
@@ -40,7 +46,6 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
-
         new CopyWebpackPlugin({
             patterns: [
             {
