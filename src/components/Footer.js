@@ -1,12 +1,14 @@
 import React from "react";
 
+import "./../styles/footer.scss";
+
 function Footer() {
 
     return (
         <>
             <footer>
                 <span>© SkillDrive Inc. 2020</span>
-                <div>
+                <div className="socials">
                     <a href="" target="_blank">
                         <img src="./assets/VK.svg" alt="VK"></img>
                     </a>

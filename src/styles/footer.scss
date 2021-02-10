@@ -1,15 +1,14 @@
 @import "_variables";
 
-.footer{
-    margin-top: 50px;
-    height: 125px;
+footer{
+    height: 124px;
     background: $footerBG;
     display: flex;
     flex-direction: column;
 
     span{
         margin-top: 30px;
-        margin-left: 18px;
+        margin-left: 20px;
         font-size: 16px;
         line-height: 19px;
         color: white;
@@ -17,13 +16,12 @@
         font-family: 'Roboto';
     }
 
-    &-socials{
+    .socials{
         margin-top: 17px;
-        margin-left: 23px;
+        margin-left: 20px;
 
         a{
             margin-right: 19px;
-            text-decoration: none;
         }
     }
 
@@ -40,9 +38,9 @@
             margin-bottom: 52px;
         }
 
-        &-socials{
+        .socials{
             margin: 0px;
-            margin-right: 46px;
+            margin-right: 40px;
             margin-top: 46px;
             margin-bottom: 46px;
 
