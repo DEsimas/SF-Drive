@@ -9,34 +9,21 @@ const isDev = process.env.NODE_ENV === 'development'
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     mode: 'development',
-    entry: {
-        FAQ: './scripts/faq-boxes.js',
-        aboutUs: './scripts/aboutUsInit.js'
-    },
+    entry: './index.js',
     output: {
-        filename: '[name].[contenthash].js',
+        filename: '[contenthash].js',
         path: path.resolve(__dirname, 'dist')
     },
     devServer: {
         contentBase: './dist',
         open: true,
-        porn: 3001,
+        port: 3001,
         hot:isDev
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'FAQ.html',
-            template: './FAQ.html',
-            chunks: ['FAQ'],
-            minify: {
-                collapseWhitespace: !isDev
-            }
-        }),
-
-        new HtmlWebpackPlugin({
-            filename: 'aboutUs.html',
-            template: './aboutUs.html',
-            chunks: ['aboutUs'],
+            filename: 'index.html',
+            template: './index.html',
             minify: {
                 collapseWhitespace: !isDev
             }
@@ -91,6 +78,22 @@ module.exports = {
             {
                 from: path.resolve(__dirname, 'src/assets/pic.svg'),
                 to: path.resolve(__dirname, 'dist/assets')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/SkillDriveLogo.svg'),
+                to: path.resolve(__dirname, 'dist/assets')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/VK.svg'),
+                to: path.resolve(__dirname, 'dist/assets')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/insta.svg'),
+                to: path.resolve(__dirname, 'dist/assets')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/facebook.svg'),
+                to: path.resolve(__dirname, 'dist/assets')
             }
         ]})
     ],
@@ -108,6 +111,11 @@ module.exports = {
             {
                 test: /\.ttf$/,
                 use: ['file-loader']
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                use: ["babel-loader"]
             }
         ]
     }

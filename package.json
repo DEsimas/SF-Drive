@@ -2,7 +2,7 @@
   "name": "sf-drive",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -30,10 +30,16 @@
     "sass-loader": "^10.1.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.17.0",
-    "webpack-cli": "^4.4.0",
+    "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "normalize.css": "^8.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
