@@ -5,9 +5,7 @@ import FAQ from "./FAQ.js";
 
 function App(){
 
-    let [page, changePage] = React.useState(<AboutUs/>);
-
-    // changePage(<FAQ/>)
+    let [page, changePage] = React.useState(<FAQ/>);
 
     return page;
 }
