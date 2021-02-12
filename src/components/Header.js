@@ -4,6 +4,14 @@ import "./../styles/header.scss";
 
 function Header() {
 
+    function changePage(page){
+        let pages = document.getElementsByClassName("page");
+        for(let i = 0; i < pages.length; i++){
+            if(pages[i].id != page) pages[i].classList.add("hide");
+            else pages[i].classList.remove("hide");
+        }
+    }
+
     return (
         <>
             <header>
@@ -12,9 +20,9 @@ function Header() {
                 </button>
                 <div className="PcMenu">
                     <nav>
-                        <button>О нас</button>
+                        <button onClick={() => changePage("aboutUs")}>О нас</button>
                         <button>Условия</button>
-                        <button>Частые вопросы</button>
+                        <button onClick={() => changePage("FAQ")}>Частые вопросы</button>
                     </nav>
                     <button className="enter">Войти</button>
                 </div>

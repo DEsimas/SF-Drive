@@ -3,11 +3,15 @@ import React from "react";
 import AboutUs from "./AboutUs.js";
 import FAQ from "./FAQ.js";
 
-function App(){
+import "./../styles/hide.scss";
 
-    let [page, changePage] = React.useState(<FAQ/>);
+function App() {
 
-    return page;
+    return(
+    <>
+        <div className="page" id="aboutUs"><AboutUs/></div>
+        <div className="page hide" id="FAQ"><FAQ/></div>
+    </>);
 }
 
 export default App;
