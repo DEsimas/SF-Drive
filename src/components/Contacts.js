@@ -1,20 +1,22 @@
 import React from "react";
 
+import "./../styles/contacts.scss";
+
 function Contacts(props) {
 	return (
-		<>
-			<h2>Контакты</h2>
-			<div>
-				<div>
-					<span>Электронная почта</span>
-					<span>drive@skillfactory.com</span>
+		<section className="cont">
+			<h2 className="header">Контакты</h2>
+			<div className="contacts">
+				<div className="emailWrap">
+					<p className="contact">Электронная почта</p>
+					<p className="value">drive@skillfactory.com</p>
 				</div>
-				<div>
-					<span>Телефон</span>
-					<span>+7 912 123 45 67</span>
+				<div className="phoneWrap">
+					<p className="contact">Телефон</p>
+					<p className="value">+7 912 123 45 67</p>
 				</div>
 			</div>
-		</>
+		</section>
 	);
 }
 

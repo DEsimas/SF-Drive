@@ -1,0 +1,86 @@
+@import "./_variables.scss";
+
+.header{
+    font-family: 'Roboto500';
+    font-size: 24px;
+    line-height: 120%;
+    text-align: center;
+    color: $main-text-color;
+}
+
+@media screen and (min-width: 600px){
+    .header{
+        font-size: 48px;
+        margin-top: 0px;
+    }
+}
+
+.cont{
+    background-color: #F7F9FB;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+@media screen and (min-width: 600px){
+    .cont{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+}
+
+
+.contacts{
+    margin-top: 20px;
+
+    .contact{
+        font-size: 12px;
+        line-height: 147.3%;
+        text-align: center;
+        color: #4F4F4F;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+
+    .value{
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 147.3%;
+        text-align: center;
+        color: black;
+        margin: 0;
+    }
+
+    .phoneWrap{
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .emailWrap{
+        margin: 0;
+    }
+
+    @media screen and (min-width: 600px){
+    
+    display: flex;
+    justify-content: center;
+
+    .contact{
+        font-size: 14px;
+    }
+
+    .value{
+        font-size: 20px;
+    }
+
+    .phoneWrap{
+        margin: 0px;
+        padding-left: 70px;
+    }
+
+    .emailWrap{
+        padding-right: 70px;
+        border-right: gray 1px solid;
+        margin-left: -40px;
+    }
+    }
+}

@@ -4,7 +4,7 @@ import Question from "./Question.js"
 
 function Questions(props) {
 	return (
-		<>
+		<section>
 			<h1>Частые вопросы</h1>
 			<p>Отвечаем на вопросы, которые у вас могут возникнуть.</p>
 			<div>
@@ -15,7 +15,7 @@ function Questions(props) {
 				<Question question="Что делать, если собственник просит заплатить ему напрямую?" answ="Ответ 5" />
 				<Question question="Должен ли я заправлять автомобиль?" answ="Ответ 6" />
 			</div>
-		</>
+		</section>
 	);
 }
 

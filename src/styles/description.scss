@@ -1,0 +1,57 @@
+@import "./_variables.scss";
+
+.mainPicWrap{
+    display: flex;
+    justify-content: center;
+}
+
+.mainPic{
+    margin-top: 60px;
+    height: 202px;
+    width: 267px;
+    margin-bottom: 40px;
+}
+
+.aboutUsHeader{
+    font-family: 'Roboto500';
+    margin: 0px;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    color: $main-text-color;
+    margin-top: 0px;
+}
+
+.aboutUsText{
+    margin-top: 10px;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: $main-text-color;
+}
+
+@media screen and (min-width: 600px){
+
+    .mainPic{
+        margin-top: 110px;
+        height: 300px;
+        width: 397px;
+        margin-bottom: 60px;
+    }
+    
+    .aboutUsHeader{
+        font-size: 64px;
+    }
+
+    .aboutUsText{
+        margin-top: 30px;
+        margin-bottom: 160px;
+        margin-left: 257px;
+        margin-right: 257px;
+        font-size: 24px;
+    }
+}

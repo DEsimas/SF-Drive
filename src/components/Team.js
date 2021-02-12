@@ -1,42 +1,21 @@
 import React from "react";
 
+import Person from "./Person.js";
+import "./../styles/team.scss"
+
 function Team(props) {
 	return (
-		<>
-			<h2>Команда</h2>
-            <div>
-                <div>
-                    <img src="assets/II.png" alt="Иван Иванов"></img>
-                    <span>Иван Иванов</span>
-                    <span>СЕО</span>
-                </div>
-                <div>
-                    <img src="assets/AS.png" alt="Алексей Смирнов"></img>
-                    <span>Алексей Смирнов</span>
-                    <span>Frontend-разработчик</span>
-                </div>
-                <div>
-                    <img src="assets/DI.png" alt="Денис Ярцев"></img>
-                    <span>Денис Ярцев</span>
-                    <span>Backend-разработчик</span>
-                </div>
-                <div>
-                    <img src="assets/NM.png" alt="Николай Морозов"></img>
-                    <span>Николай Морозов</span>
-                    <span>Дизайнер</span>
-                </div>
-                <div>
-                    <img src="assets/ID.png" alt="Ирина Деева"></img>
-                    <span>Ирина Деева</span>
-                    <span>Копирайтер</span>
-                </div>
-                <div>
-                    <img src="assets/MS.png" alt="Мария Стрелкова"></img>
-                    <span>Мария Стрелкова</span>
-                    <span>SMM</span>
-                </div>
+		<section className="sectionName">
+			<h2 className="header">Команда</h2>
+            <div className="team">
+                <Person className="person" img="II" name="Иван Иванов" profession="СЕО"/>
+                <Person className="person" img="AS" name="Алексей Смирнов" profession="Frontend-разработчик"/>
+                <Person className="person" img="DI" name="Денис Ярцев" profession="Backend-разработчик"/>
+                <Person className="person" img="NM" name="Николай Морозов" profession="Дизайнер"/>
+                <Person className="person" img="ID" name="Ирина Деева" profession="Копирайтер"/>
+                <Person className="person" img="MS" name="Мария Стрелкова" profession="SMM"/>
             </div>
-		</>
+		</section>
 	);
 }
 

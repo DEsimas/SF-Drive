@@ -1,0 +1,48 @@
+@import "./_variables.scss";
+
+.sectionName{
+
+    .team{
+        display: grid;
+        grid-template-columns: repeat(2, 160px);
+        text-align: center;
+        justify-content: center;
+    }
+
+    .header{
+        font-family: 'Roboto500';
+        font-size: 24px;
+        line-height: 120%;
+        text-align: center;
+        color: $main-text-color;
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 600px){
+        
+        .team{
+            grid-template-columns: repeat(4, auto);
+
+            :nth-child(5){
+                grid-column: 2 / 3;
+                grid-row: 2 / 3;
+            }
+
+            :nth-child(6){
+                grid-column: 3 / 4;
+                grid-row: 2 / 3;
+            }
+        }
+
+        .header{
+            margin-top: 80px;
+            font-size: 48px;
+            margin-bottom: 25px;
+        }
+
+        .person{
+            margin: 30px 40px;
+        }
+    }
+}
+
