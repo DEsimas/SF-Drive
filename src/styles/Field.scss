@@ -43,5 +43,9 @@
         .input:hover{
             border: 2px solid #61a199b4;
         }
+        .input:focus {
+            outline: none;
+            border: 2px solid #61A199;
+        }
     }
 }

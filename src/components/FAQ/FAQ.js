@@ -1,9 +1,9 @@
 import React from "react";
 
-import Header from "./Header.js";
+import Header from "./../Header.js";
 import Questions from './Questions.js';
-import Footer from"./Footer.js";
-import "./../styles/FAQmain.scss";
+import Footer from"./../Footer.js";
+import "./../../styles/FAQmain.scss";
 
 function FAQ(props) {
 	return (

@@ -1,7 +1,7 @@
 import React from "react";
 
 import Person from "./Person.js";
-import "./../styles/team.scss"
+import "./../../styles/team.scss"
 
 function Team(props) {
 	return (

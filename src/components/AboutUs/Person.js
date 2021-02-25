@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./../styles/person.scss"
+import "./../../styles/person.scss"
 
 function Person(props) {
 	return (

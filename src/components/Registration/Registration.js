@@ -1,11 +1,11 @@
 import React from "react";
 
-import Header from "./Header.js";
+import Header from "../Header.js";
 import CommonInfo from "./CommonInfo.js";
 import Passport from "./Passport.js";
 import License from "./License.js";
 
-import "./../styles/Registration.scss";
+import "./../../styles/Registration.scss";
 
 function Registration(props) {
     function apply(){

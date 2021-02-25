@@ -1,7 +1,7 @@
 import React from "react";
 
 import Question from "./Question.js"
-import "./../styles/questions.scss"
+import "./../../styles/questions.scss"
 
 function Questions(props) {
 

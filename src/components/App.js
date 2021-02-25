@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-import AboutUs from "./AboutUs.js";
-import FAQ from "./FAQ.js";
-import Registration from "./Registration.js";
+import AboutUs from "./AboutUs/AboutUs.js";
+import FAQ from "./FAQ/FAQ.js";
+import Registration from "./Registration/Registration.js";
 
 import "./../styles/hide.scss";
 

@@ -763,7 +763,10 @@ header {
     .field .input {
       width: auto; }
     .field .input:hover {
-      border: 2px solid #61a199b4; } }
+      border: 2px solid #61a199b4; }
+    .field .input:focus {
+      outline: none;
+      border: 2px solid #61A199; } }
 
 @font-face {
   src: url(./0cea39826bd36bbfe33076c544e3a1af.ttf);
