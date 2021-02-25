@@ -12,14 +12,12 @@ module.exports = {
     entry: './index.js',
     output: {
         filename: '[contenthash].js',
-        path: path.resolve(__dirname, 'dist'),
-        // publicPath = '/'
+        path: path.resolve(__dirname, 'dist')
     },
     devServer: {
         contentBase: './dist',
         port: 4200,
-        hot:true,
-        // historyApiFallback = true,
+        hot:true
     },
     plugins: [
         new HtmlWebpackPlugin({
