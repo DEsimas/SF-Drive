@@ -559,12 +559,12 @@ header {
   src: url(./13a29228654d5c5ec9c482a267efa4af.ttf);
   font-family: "Roboto500"; }
 
-footer {
+.footer {
   height: 124px;
   background: #3F3D56;
   display: flex;
   flex-direction: column; }
-  footer span {
+  .footer span {
     margin-top: 30px;
     margin-left: 20px;
     font-size: 16px;
@@ -572,28 +572,28 @@ footer {
     color: white;
     opacity: 0.4;
     font-family: 'Roboto'; }
-  footer .socials {
+  .footer .socials {
     margin-top: 17px;
     margin-left: 23px; }
-    footer .socials a {
+    .footer .socials a {
       margin-right: 19px; }
   @media screen and (min-width: 600px) {
-    footer {
+    .footer {
       flex-direction: row;
       justify-content: space-between;
       margin-top: 120px; }
-      footer span {
+      .footer span {
         font-size: 16px;
         margin: 0px;
         margin-left: 40px;
         margin-top: 53px;
         margin-bottom: 52px; }
-      footer .socials {
+      .footer .socials {
         margin: 0px;
         margin-right: 40px;
         margin-top: 46px;
         margin-bottom: 46px; }
-        footer .socials a {
+        .footer .socials a {
           margin: 0px;
           margin-left: 16px; } }
 
@@ -721,6 +721,109 @@ footer {
   .FAQmain .FAQimage {
     width: 360px;
     height: 300px; } }
+
+@font-face {
+  src: url(./0cea39826bd36bbfe33076c544e3a1af.ttf);
+  font-family: "Roboto"; }
+
+@font-face {
+  src: url(./13a29228654d5c5ec9c482a267efa4af.ttf);
+  font-family: "Roboto500"; }
+
+.field .p {
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 16px;
+  color: #1B1B1B;
+  margin: 0; }
+
+.field .input {
+  margin: 0;
+  margin-top: 12px;
+  background: white;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 6px;
+  outline: none;
+  font-family: Roboto;
+  width: 100%;
+  padding: 14px 0px 14px 12px;
+  font-size: 14px; }
+
+.field .input:focus {
+  outline: none;
+  border: 2px solid #61A199; }
+
+@media screen and (min-width: 600px) {
+  .field {
+    display: inline; }
+    .field .p {
+      font-size: 14px; }
+    .field .input {
+      width: auto; }
+    .field .input:hover {
+      border: 2px solid #61a199b4; } }
+
+@font-face {
+  src: url(./0cea39826bd36bbfe33076c544e3a1af.ttf);
+  font-family: "Roboto"; }
+
+@font-face {
+  src: url(./13a29228654d5c5ec9c482a267efa4af.ttf);
+  font-family: "Roboto500"; }
+
+.phase {
+  text-align: center;
+  margin: 0;
+  margin-top: 70px;
+  font-family: Roboto;
+  font-size: 12px;
+  line-height: 147.3%;
+  color: #828282; }
+
+.mainheader {
+  font-family: Roboto500;
+  font-size: 32px;
+  line-height: 120%;
+  text-align: center;
+  color: #1B1B1B;
+  margin: 0;
+  margin-top: 10px; }
+
+.fields {
+  margin: 40px 20px; }
+
+.bottomsection {
+  border-top: 1px solid gray;
+  text-align: center; }
+  .bottomsection button {
+    width: 335px;
+    height: 51px;
+    background: #61A199;
+    border-radius: 6px;
+    border: none;
+    margin: 16px 0px;
+    font-family: Roboto;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    color: white;
+    outline: none; }
+
+@media screen and (min-width: 600px) {
+  .phase {
+    margin-top: 100px;
+    font-size: 20px; }
+  .mainheader {
+    font-size: 64px;
+    margin-top: 15px; }
+  .fields {
+    margin: 50px auto 100px auto; }
+  .bottomsection button {
+    padding: 16px 40px;
+    width: 176px;
+    height: 51px;
+    border-radius: 6px; } }
 
 .hide {
   display: none; }

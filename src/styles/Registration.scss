@@ -1,0 +1,71 @@
+@import "./_variables.scss";
+
+.phase{
+    text-align: center;
+    margin: 0;
+    margin-top: 70px;
+    font-family: Roboto;
+    font-size: 12px;
+    line-height: 147.3%;
+    color: #828282;
+}
+
+.mainheader{
+    font-family: Roboto500;
+    font-size: 32px;
+    line-height: 120%;
+    text-align: center;
+    color: $main-text-color;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.fields{
+    margin: 40px 20px;
+}
+
+.bottomsection{
+    border-top: 1px solid gray;
+    text-align: center;
+    button{
+        width: 335px;
+        height: 51px;
+        background: #61A199;
+        border-radius: 6px;
+        border: none;
+        margin: 16px 0px;
+
+        font-family: Roboto;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: white;
+
+        outline: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .phase{
+        margin-top: 100px;
+        font-size: 20px;
+    }
+
+    .mainheader{
+        font-size: 64px;
+        margin-top: 15px;
+    }
+
+    .fields{
+        margin: 50px auto 100px auto;
+    }
+
+    .bottomsection{
+        button{
+            padding: 16px 40px;
+            width: 176px;
+            height: 51px;
+            border-radius: 6px;
+        }
+    }
+}

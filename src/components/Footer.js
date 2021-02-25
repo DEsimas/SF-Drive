@@ -6,7 +6,7 @@ function Footer() {
 
     return (
         <>
-            <footer>
+            <footer className="footer">
                 <span>© SkillDrive Inc. 2020</span>
                 <div className="socials">
                     <a href="" target="_blank">

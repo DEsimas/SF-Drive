@@ -1,0 +1,47 @@
+@import "./_variables.scss";
+.field{
+    .p{
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: $main-text-color;
+        margin: 0;
+    }
+
+    .input{
+        margin: 0;
+        margin-top: 12px;
+        background: white;
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        border-radius: 6px;
+        outline: none;
+        font-family: Roboto;
+        width: 100%;
+        padding: 14px 0px 14px 12px;
+        font-size: 14px;
+    }
+
+    .input:focus {
+        outline: none;
+        border: 2px solid #61A199;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .field{
+        display: inline;
+
+        .p{
+            font-size: 14px;
+        }
+        
+        .input{
+            width: auto;
+        }
+
+        .input:hover{
+            border: 2px solid #61a199b4;
+        }
+    }
+}
