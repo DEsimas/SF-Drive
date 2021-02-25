@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 
 import AboutUs from "./AboutUs.js";
 import FAQ from "./FAQ.js";
@@ -10,9 +11,11 @@ function App() {
 
     return(
     <>
-        <div className="page" id="Registration"><Registration/></div>
-        <div className="page hide" id="aboutUs"><AboutUs/></div>
-        <div className="page hide" id="FAQ"><FAQ/></div>
+        <Switch>
+            <Route path="/AboutUs" className="page" id="aboutUs"><AboutUs/></Route>
+            <Route path="/FAQ" className="page" id="FAQ"><FAQ/></Route>
+            <Route path="/" className="page" id="Registration"><Registration/></Route>
+        </Switch>
     </>);
 }
 

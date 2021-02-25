@@ -346,12 +346,13 @@ header {
         margin-right: 50px; }
       header nav {
         margin-top: 8px; }
-        header nav button {
+        header nav a {
           margin-right: 30px;
           font-family: 'Roboto';
           font-size: 16px;
           line-height: 19px;
-          color: #1B1B1B; } }
+          color: #1B1B1B;
+          text-decoration: none; } }
 
 @font-face {
   src: url(./0cea39826bd36bbfe33076c544e3a1af.ttf);

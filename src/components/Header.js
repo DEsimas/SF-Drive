@@ -20,9 +20,9 @@ function Header() {
                 </button>
                 <div className="PcMenu">
                     <nav>
-                        <button onClick={() => changePage("aboutUs")}>О нас</button>
-                        <button>Условия</button>
-                        <button onClick={() => changePage("FAQ")}>Частые вопросы</button>
+                        <a href="http://192.168.1.37:4200/AboutUs">О нас</a>
+                        <a>Условия</a>
+                        <a href="http://192.168.1.37:4200/FAQ">Частые вопросы</a>
                     </nav>
                     <button className="enter">Войти</button>
                 </div>
