@@ -1,16 +1,17 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 
 import AboutUs from "./AboutUs.js";
 import FAQ from "./FAQ.js";
 
-import "./../styles/hide.scss";
-
 function App() {
 
-    return(
+    return (
     <>
-        <div className="page" id="aboutUs"><AboutUs/></div>
-        <div className="page hide" id="FAQ"><FAQ/></div>
+        <Switch>
+            <Route path="/"><AboutUs/></Route>
+            <Route path="/faq"><FAQ/></Route>
+        </Switch>
     </>);
 }
 
