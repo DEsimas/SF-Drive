@@ -27,7 +27,7 @@
 .bottomsection{
     border-top: 1px solid gray;
     text-align: center;
-    button{
+    .sendform{
         width: 335px;
         height: 51px;
         background: #61A199;
@@ -42,6 +42,11 @@
         color: white;
 
         outline: none;
+
+        .isDisabled{
+            color: #B4B5BD;
+            background: #E6E6E6;
+        }
     }
 }
 
@@ -58,10 +63,11 @@
 
     .fields{
         margin: 50px auto 100px auto;
+        width: 670px;
     }
 
     .bottomsection{
-        button{
+        .sendform{
             padding: 16px 40px;
             width: 176px;
             height: 51px;

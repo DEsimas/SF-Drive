@@ -41,7 +41,7 @@ function Registration(props) {
                 <License/>
             </div>
             <footer className="bottomsection">
-                <button onClick={apply}>Продолжить</button>
+                <button className="sendform isDisabled" onClick={apply}>Продолжить</button>
             </footer>
 		</>
 	);
