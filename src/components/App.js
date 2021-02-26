@@ -5,8 +5,6 @@ import AboutUs from "./AboutUs/AboutUs.js";
 import FAQ from "./FAQ/FAQ.js";
 import Registration from "./Registration/Registration.js";
 
-import "./../styles/hide.scss";
-
 function App() {
 
     return(

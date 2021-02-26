@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./../../styles/question.scss";
+import "./../../styles/FAQ/question.scss";
 
 function Question(props) {
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./../../styles/Field.scss";
+import "./../../styles/Registration/Field.scss";
 
 function Field(props) {
 	return (

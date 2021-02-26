@@ -5,7 +5,7 @@ import CommonInfo from "./CommonInfo.js";
 import Passport from "./Passport.js";
 import License from "./License.js";
 
-import "./../../styles/Registration.scss";
+import "./../../styles/Registration/Registration.scss";
 
 function Registration(props) {
     function apply(){

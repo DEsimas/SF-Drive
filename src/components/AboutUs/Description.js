@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./../../styles/description.scss";
+import "./../../styles/AboutUs/description.scss";
 
 function Description() {
 
