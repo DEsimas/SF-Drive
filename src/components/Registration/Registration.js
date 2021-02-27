@@ -28,6 +28,11 @@ function Registration(props) {
         data.license = license;
 
         console.log(data);
+
+        // fetch('http://localhost:8000/', { method: "POST", body: JSON.stringify(data)})
+        //     .then(res => res.text())
+        //     .then(res => console.log(res))
+        //     .catch(e => console.log(e));
     }
 
 	return (
