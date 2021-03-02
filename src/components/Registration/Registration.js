@@ -70,7 +70,7 @@ function Registration(props) {
                 console.log(data);
                 if(data.status !== "ok") markFields(data);
             })
-            .catch(e => console.log(e));
+            .catch(e => document.getElementById('alert').classList.remove('hide'));
 
         delLoad();
     }
