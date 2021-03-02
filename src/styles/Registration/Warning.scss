@@ -1,0 +1,28 @@
+@import "./../_Common/_variables.scss";
+
+.alert{
+    width: 100%;
+    position: absolute;
+    background-color: #EB5757;
+    text-align: center;
+    padding: 20px 0px;
+
+    &__name{
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 19px;
+        color: white;        
+    }
+
+    &.hide{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .alert{
+        &__name{
+            font-size: 16px;
+        }
+    }
+}

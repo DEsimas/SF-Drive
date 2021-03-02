@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
-    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --host 192.168.1.37"
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,8 @@
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "babel-loader": "^8.2.2",
+    "cors": "^2.8.5",
+    "mongoose": "^5.11.18",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

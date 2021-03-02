@@ -22,9 +22,21 @@
         font-size: 14px;
     }
 
+    .warning{
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #EB5757;
+        margin-top: 8px;
+    }
+
     .input:focus {
         outline: none;
         border: 2px solid #61A199;
+    }
+
+    .error{
+        border-color: red;
     }
 }
 
