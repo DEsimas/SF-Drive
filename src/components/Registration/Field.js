@@ -15,7 +15,7 @@ function Field(props) {
 				<span className="p">{props.name}</span>
             	<input onChange={normalize}className="input" id={props.identificator} type={props.inputType} placeholder={props.placeholder}/>
 				<div/>
-				<span className="warning" id={props.idWarning}></span>
+				<span className="warning" id={ "W" + props.identificator}></span>
 			</div>
 		</>
 	);

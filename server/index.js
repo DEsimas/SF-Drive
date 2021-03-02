@@ -3,6 +3,9 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 
 const PORT = 8000;
+const DB_PATH = "mongodb://localhost/test";
+const WHITE_LIST = ["http://localhost:4200"];
+const IDS = ["name", "birth", "email", "phone", "passport", "passportdate", "passportwho", "passportcode", "license", "licensedate"];
 
 function setMiddlewares(){
     app.use(express.json());
@@ -29,35 +32,52 @@ function getSchema(){
 });
 }
 
+function connectDB() {
+    mongoose.connect(DB_PATH, { useNewUrlParser: true, useUnifiedTopology: true})
+        .then(() => console.log('DB is ok'))
+        .catch((e) => console.log('DB error: ' + e));
+}
 
+function getRandomId() {
+    return Math.floor(Math.random() * IDS.length);
+}
+
+async function saveUser(userData) {
+
+    const errors = await checkUser(userData);
+
+    if(!errors) {
+        const newUser = new User(userData);
+        await newUser.save();
+        return 0;
+    } else return errors;
+}
+
+async function checkUser(userData) {
+    // return [IDS[getRandomId()]];
+    return 0;
+}
 
 const app = express();
-
-mongoose.connect('mongodb://localhost/test', { useNewUrlParser: true, useUnifiedTopology: true})
-    .then(() => console.log('YES'))
-    .catch(() => console.log('NOOOOO'));
-
+connectDB();
 setMiddlewares();
-
-let ids = ["name", "birth", "email", "phone", "passport", "passportdate", "passportwho", "passportcode", "license", "licensedate"];
-
 const User = mongoose.model('User', getSchema());
 
 app.get('/', async (req, res) => {
-    // if(ctr === ids.length) ctr = 0;
+    res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
     const data = await User.find();
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
-    console.log(data);
     res.send(data);
-    // res.send({correct: false, errorIn: ids[ctr++]});
 });
 
 app.post('/', async (req, res) => {
-    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200/");
+    res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
     console.log(req.body);
-    const newUser = new User(req.body);
-    await newUser.save();
-    res.json(JSON.stringify(req.body));
+    // const errors = await saveUser(req.body);
+    // if(!errors) {
+    //     res.send(["cumgod"]);
+    // }
+    res.send({ status: 'ok'});
+    
 });
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import Header from "../Header.js";
 import CommonInfo from "./CommonInfo.js";
@@ -11,8 +11,6 @@ import "./../../styles/Registration/Registration.scss";
 const SERVER_ADDRESS = "http://localhost:8000/";
 
 function Registration(props) {
-    const[response, setRes] = useState({});
-
     function getData(){
         let passport = new Object();
         passport.name = document.getElementById("passport").value;
@@ -44,8 +42,15 @@ function Registration(props) {
         </svg>`;
     }
 
-    function delLoad(){
+    function delLoad() {
         document.getElementsByClassName("sendform")[0].innerHTML = "Продолжить";
+    }
+
+    function markFields(incorrectList) {
+        incorrectList.map(el => {
+            document.getElementById('W' + el).innerHTML = 'Заполни как надо';
+            document.getElementById(el).classList.add('error');
+        });
     }
 
     function apply(){
@@ -58,18 +63,16 @@ function Registration(props) {
             body: JSON.stringify(getData()),
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
-              }
+            }
         })
             .then(res => res.json())
-            .then((res) => response = res)
-            .catch((e) => console.log(e));
+            .then(data => {
+                console.log(data);
+                if(data.status !== "ok") markFields();
+            })
+            .catch(e => console.log(e));
 
         delLoad();
-
-        // console.log(response.errorIn);
-
-        // document.getElementById('W' + response.errorIn).innerHTML = 'Заполни как надо';
-        // document.getElementById(response.errorIn).classList.add('error');
     }
 
 	return (
