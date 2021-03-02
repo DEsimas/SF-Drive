@@ -54,7 +54,10 @@ async function saveUser(userData) {
 }
 
 async function checkUser(userData) {
-    // return [IDS[getRandomId()]];
+    return [
+            { element: IDS[getRandomId()], message: "just test" },
+            { element: IDS[getRandomId()], message: "i want to sleep lol"}
+        ];
     return 0;
 }
 
@@ -72,12 +75,12 @@ app.get('/', async (req, res) => {
 app.post('/', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
     console.log(req.body);
-    // const errors = await saveUser(req.body);
-    // if(!errors) {
-    //     res.send(["cumgod"]);
-    // }
-    res.send({ status: 'ok'});
-    
+    const errors = await saveUser(req.body);
+    if(!errors) {
+        res.send({ status: 'ok'});
+    } else {
+        res.status(206).send(errors);
+    }
 });
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));

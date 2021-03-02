@@ -48,8 +48,8 @@ function Registration(props) {
 
     function markFields(incorrectList) {
         incorrectList.map(el => {
-            document.getElementById('W' + el).innerHTML = 'Заполни как надо';
-            document.getElementById(el).classList.add('error');
+            document.getElementById('W' + el.element).innerHTML = el.message;
+            document.getElementById(el.element).classList.add('error');
         });
     }
 
@@ -68,7 +68,7 @@ function Registration(props) {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
-                if(data.status !== "ok") markFields();
+                if(data.status !== "ok") markFields(data);
             })
             .catch(e => console.log(e));
 
