@@ -32,7 +32,7 @@ function Field(props) {
 		<>
 			<div className="field">
 				<span className="p">{props.name}</span>
-            	<input onChange={() => useEffectTrigger('')} className="input" id={props.identificator} type={props.inputType} placeholder={props.placeholder}/>
+            	<input onChange={() => useEffectTrigger(CRUTCH+'!')} className="input" id={props.identificator} type={props.inputType} placeholder={props.placeholder}/>
 				<div/>
 				<span className="warning" id={ "W" + props.identificator}></span>
 			</div>

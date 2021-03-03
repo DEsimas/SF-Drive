@@ -20,17 +20,25 @@ function getRandomId() {
 }
 
 async function checkUser(userData) {
-    // return [
-    //         { element: IDS[getRandomId()], message: "just test" },
-    //         { element: IDS[getRandomId()], message: "i want to sleep lol"}
-    //     ];
     let errors = [];
     let index = 0;
 
-    if(await User.find({email: userData.email})){
+    if(await (await User.find({email: userData.email})).length){
         console.log('user aleready exists');
         errors[index++] = {element: IDS[2], message: "Пользователь с такой почтой уже существует."};
     }
+    // if(await (await User.find({email: userData.phone})).length){
+    //     console.log('user aleready exists');
+    //     errors[index++] = {element: IDS[3], message: "Пользователь с таким номером телефона уже существует."};
+    // }
+    // if(await (await User.find({email: userData.passport.name})).length){
+    //     console.log('user aleready exists');
+    //     errors[index++] = {element: IDS[4], message: "Пользователь с таким паспортом уже существует."};
+    // }
+    // if(await (await User.find({email: userData.license.name})).length){
+    //     console.log('user aleready exists');
+    //     errors[index++] = {element: IDS[8], message: "Пользователь с таким удостоверением уже существует."};
+    // }
 
     return errors;
 }
@@ -44,7 +52,8 @@ module.exports.connectDB = function() {
 module.exports.saveUser = async function (userData) {
     const errors = await checkUser(userData);
 
-    if(!errors) {
+    if(!errors.length) {
+        console.log('saving');
         const newUser = new User(userData);
         await newUser.save();
         return 0;
