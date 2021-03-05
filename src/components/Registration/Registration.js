@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
-import Header from "../Header.js";
+import Warning from "./Warning.js";
+import Header from "./../Common/Header.js";
 import CommonInfo from "./CommonInfo.js";
 import Passport from "./Passport.js";
 import License from "./License.js";
-import Warning from "./Warning.js"
 
 import "./../../styles/Registration/Registration.scss";
-
-
+import "./../../styles/Registration/Info.scss";
 
 function Registration(props) {
+
     const getData = () => ({
         name: name,
         birth: birth,
@@ -28,12 +28,6 @@ function Registration(props) {
             code: passportCode
         }
     });
-
-    function apply(){
-        const data = getData();
-        console.log(data);
-        props.registrationSendData(data);
-    }
 
     const [name, setName] = useState("");    
     const [birth, setBirth] = useState("");    
@@ -61,10 +55,10 @@ function Registration(props) {
                 <License value={[license,licensedate]} change={[setLicense,setLicenseDate]}/>
             </div>
             <footer className="bottomsection">
-                <button id="sendform" className="sendform isDisabled" onClick={apply}>Продолжить</button>
+                <button id="sendform" className="sendform isDisabled" onClick={() => props.registrationSendData(getData())}>Продолжить</button>
             </footer>
 		</>
 	);
-}
+};
 
 export default Registration;

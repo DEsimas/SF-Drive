@@ -2,8 +2,6 @@ import React from "react";
 
 import Field from './Field.js';
 
-import "./../../styles/Registration/Info.scss";
-
 function CommonInfo(props) {
 	return (
 		<>
