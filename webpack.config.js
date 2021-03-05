@@ -95,6 +95,10 @@ module.exports = {
             {
                 from: path.resolve(__dirname, 'src/assets/facebook.svg'),
                 to: path.resolve(__dirname, 'dist/assets')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/Authorization.svg'),
+                to: path.resolve(__dirname, 'dist/assets')
             }
         ]})
     ],

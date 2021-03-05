@@ -29,6 +29,15 @@ function Registration(props) {
         }
     });
 
+    const handleErrors = () => {
+        //mark incorrect fields
+    };
+
+    const handleClick = () => {
+        handleErrors();
+        props.registrationSendData(getData())
+    }
+
     const [name, setName] = useState("");    
     const [birth, setBirth] = useState("");    
     const [email, setEmail] = useState("");
@@ -55,7 +64,7 @@ function Registration(props) {
                 <License value={[license,licensedate]} change={[setLicense,setLicenseDate]}/>
             </div>
             <footer className="bottomsection">
-                <button id="sendform" className="sendform isDisabled" onClick={() => props.registrationSendData(getData())}>Продолжить</button>
+                <button id="sendform" className="sendform isDisabled" onClick={handleClick}>Продолжить</button>
             </footer>
 		</>
 	);
