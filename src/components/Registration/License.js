@@ -9,8 +9,8 @@ function License(props) {
 		<>
 			<h2 className="InfoHeader">Водительское удостоверение</h2>
 			<div className="inputs">
-            <Field className="field" name="Серия и номер" inputType="text" placeholder="0000 000000" identificator="license"/>
-            <Field className="field" name="Дата выдачи" inputType="date" identificator="licensedate"/>
+            <Field value={props.value[0]} change={props.change[0]} className="field" name="Серия и номер" inputType="text" placeholder="0000 000000" identificator="license"/>
+            <Field value={props.value[1]} change={props.change[1]} className="field" name="Дата выдачи" inputType="date" identificator="licensedate"/>
 			</div>
 		</>
 	);

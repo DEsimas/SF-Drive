@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const DB_PATH = "mongodb://localhost/test";
 const User = mongoose.model('User', getSchema());
-const IDS = ["name", "birth", "email", "phone", "passport", "passportdate", "passportwho", "passportcode", "license", "licensedate"];
+const IDS = ["name", "birth", "email", "phone", "password", "passport", "passportdate", "passportwho", "passportcode", "license", "licensedate"];
 
 function getSchema(){
     return userSchema = new mongoose.Schema({
@@ -10,6 +10,7 @@ function getSchema(){
     birth: String,
     email: String,
     phone: String,
+    password: String,
     passport: { name: String, who: String, date: String, code: String },
     license: { name: String, date: String }
 });
