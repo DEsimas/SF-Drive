@@ -33,18 +33,22 @@ const app = express();
 DAO.connectDB();
 setMiddlewares();
 
+app.get('/', (req, res) => {
+    res.send(service.createTokens({ hello: "world" }));
+});
+
 app.post('/', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
     console.log(req.body);
-    data = await service.processUser(req);
+    let data = await service.processUser(req);
     console.log(data);
     res.status(data.status).send(data.body);
 });
 
-app.post('/authorization/', (req, res) => {
+app.post('/authorization/', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
     console.log(req.body);
-    const result = await service.validate(req);
+    let result = await service.validate(req.body);
     res.status(result.status).send(result.body);
 });
 
