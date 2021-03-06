@@ -27,3 +27,4 @@ export const authorizationRequest = data => {
         .then(data => console.log(data))
         .catch(e => console.log(e));
 }
+

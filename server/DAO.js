@@ -65,3 +65,7 @@ module.exports.getAllUsers = async function(){
     return await User.find();
 }
 
+module.exports.findInUsers = async function(data){
+    return await User.find(data);
+}
+

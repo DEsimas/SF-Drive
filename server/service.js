@@ -15,3 +15,9 @@ module.exports.processUser = async function(req) {
         }
     }
 }
+
+module.exports.validate = async function(req) {
+    let user = await DAO.findInUsers(req);
+    console.log(user);
+    return {status: 418, body: {hello: "world"}};
+}

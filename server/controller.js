@@ -44,7 +44,8 @@ app.post('/', async (req, res) => {
 app.post('/authorization/', (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
     console.log(req.body);
-    res.send(req.body);
+    const result = await service.validate(req);
+    res.status(result.status).send(result.body);
 });
 
 app.listen(PORT, () => console.log(`listening on ${PORT}`));
