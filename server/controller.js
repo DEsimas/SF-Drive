@@ -48,7 +48,7 @@ app.post('/authorization/', async (req, res) => {
     res.status(result.status).send(result.body);
 });
 
-app.post('/recovery', async (req, res) => {
+app.post('/recovery', /*service.authMiddlware,*/ async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
     console.log(req.body);
     console.log(req.headers);

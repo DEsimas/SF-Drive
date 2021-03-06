@@ -13,6 +13,28 @@ const createTokens = function(payload){
     }
 }
 
+module.exports.authMiddlware = function (req, res, next) {
+    const header = req.headers['Authorization'];
+    console.log(header);
+    const token = header && header.split(' ')[1];
+
+    if(!token){
+        return res.sendStatus(401);
+    }
+
+    JWT.verify(token, ACCESS_TOKEN_SECRET, {}, (err, payload) => {
+        if(err) {
+            return res.sendStatus(403);
+        }
+
+        if(req.body.email != payload.email) return res.sendStatus(403);
+
+        req.payload = payload;
+
+        next();
+    });
+};
+
 module.exports.processUser = async function(req) {
     const errors = await DAO.saveUser(req.body);
 
