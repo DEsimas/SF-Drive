@@ -19,7 +19,7 @@ module.exports.processUser = async function(req) {
     if(!errors) {
         return{
             status: 200,
-            body: { status: 'ok' }
+            body: createTokens(req.body)
         }
     } else {
         return{

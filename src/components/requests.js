@@ -12,7 +12,10 @@ export const registrationRequest = data => {
             }
         })
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data);
+                if(data.accessToken) writeTokens(data.accessToken, data.refreshToken);
+            })
             .catch(e => document.getElementById('alert').classList.remove('hide'));
 };
 

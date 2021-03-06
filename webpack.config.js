@@ -99,6 +99,18 @@ module.exports = {
             {
                 from: path.resolve(__dirname, 'src/assets/Authorization.svg'),
                 to: path.resolve(__dirname, 'dist/assets')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/backArrow.svg'),
+                to: path.resolve(__dirname, 'dist/assets')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/cross.svg'),
+                to: path.resolve(__dirname, 'dist/assets')
+            },
+            {
+                from: path.resolve(__dirname, 'src/assets/recImage.svg'),
+                to: path.resolve(__dirname, 'dist/assets')
             }
         ]})
     ],

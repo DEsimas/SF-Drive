@@ -9,6 +9,7 @@ import AboutUs from "./AboutUs/AboutUs.js";
 import FAQ from "./FAQ/FAQ.js";
 import Registration from "./Registration.jsx";
 import Authorization from './Authorization.jsx'
+import Recovery from "./Recovery.jsx";
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -21,6 +22,7 @@ function App() {
                 <Route path="/AboutUs" className="page" id="aboutUs"><AboutUs/></Route>
                 <Route path="/FAQ" className="page" id="FAQ"><FAQ/></Route>
                 <Route path="/Registration" className="page" id="Registration"><Registration/></Route>
+                <Route path="/Recovery" className="page" id="Recovery"><Recovery/></Route>
                 <Route path="/" className="page" id="Authorization"><Authorization/></Route>
             </Switch>
         </Provider>
