@@ -35,3 +35,19 @@ module.exports.validate = async (req) => {
     if(user.length == 0) return {status: 404, body: {status: "user not found"}}
     else return { status: 200, body: createTokens(user[0].toJSON()) };
 }
+
+module.exports.recovery = async (req) => {
+    if(await DAO.changePassword(req.email, req.password) == null){
+        return {
+            status: 404,
+            body: {message: "user not found"}
+        };
+    } else{
+        return{
+            status: 202,
+            body: {
+                message: "ok"
+            }
+        };
+    };
+}

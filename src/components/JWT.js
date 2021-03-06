@@ -1,6 +1,6 @@
 import JWTdecode from 'jwt-decode';
 
-const ACCESS_TOKEN_STORAGE_KEY = 'accessToken';
+export const ACCESS_TOKEN_STORAGE_KEY = 'accessToken';
 const REFRESH_TOKEN_STORAGE_KEY = 'refreshToken';
 const MILLISECONDS_IN_SECOND = 1000;
 const ACCESS_TOKEN_UPDATAE_DIFF = 60;
@@ -53,10 +53,10 @@ export const writeTokens = function(access, refresh){
     localStorage.setItem(REFRESH_TOKEN_STORAGE_KEY, refresh);
 };
 
-// const getAccessToken = async () => {
+// export const getAccessToken = async () => {
 //     const accessToken = localStorage.getItem(ACCESS_TOKEN_STORAGE_KEY);
-//     const tokenData = decodeToken(accessToken);
-//     const isAccessTokenValid = isTokenValid(tokenData.exp);
+    // const tokenData = decodeToken(accessToken);
+    // const isAccessTokenValid = isTokenValid(tokenData.exp);
 
     // if(!isAccessTokenValid) {
     //     return await updateTokens();

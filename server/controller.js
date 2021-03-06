@@ -48,4 +48,12 @@ app.post('/authorization/', async (req, res) => {
     res.status(result.status).send(result.body);
 });
 
+app.post('/recovery', async (req, res) => {
+    res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
+    console.log(req.body);
+    console.log(req.headers);
+    let result = await service.recovery(req.body);
+    res.status(result.status).send(result.body);
+})
+
 app.listen(PORT, () => console.log(`listening on ${PORT}`));

@@ -13,12 +13,12 @@ function getSchema(){
     password: String,
     passport: { name: String, who: String, date: String, code: String },
     license: { name: String, date: String }
-});
-}
+    });
+};
 
 function getRandomId() {
     return Math.floor(Math.random() * IDS.length);
-}
+};
 
 async function checkUser(userData) {
     let errors = [];
@@ -42,13 +42,13 @@ async function checkUser(userData) {
     // }
 
     return errors;
-}
+};
 
 module.exports.connectDB = function() {
     mongoose.connect(DB_PATH, { useNewUrlParser: true, useUnifiedTopology: true})
         .then(() => console.log('DB is ok'))
         .catch((e) => console.log('DB error: ' + e));
-}
+};
 
 module.exports.saveUser = async function (userData) {
     const errors = await checkUser(userData);
@@ -59,13 +59,16 @@ module.exports.saveUser = async function (userData) {
         await newUser.save();
         return 0;
     } else return errors;
-}
+};
 
 module.exports.getAllUsers = async function(){
     return await User.find();
-}
+};
 
 module.exports.findInUsers = async function(data){
     return await User.find(data);
-}
+};
 
+module.exports.changePassword = async function(email, password) {
+    return await User.findOneAndUpdate({email: email}, {$set:{password: password}});
+};

@@ -1,4 +1,4 @@
-import { writeTokens } from "./JWT";
+import { writeTokens, ACCESS_TOKEN_STORAGE_KEY } from "./JWT";
 
 const SERVER_ADDRESS = "http://localhost:8000/";
 
@@ -39,5 +39,20 @@ export const authorizationRequest = data => {
 };
 
 export const recoveryRequest = data => {
-    console.log('lets go');
+
+    fetch(SERVER_ADDRESS + 'recovery/',
+    {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8',
+            'Authorization': `Bearer ${localStorage.getItem(ACCESS_TOKEN_STORAGE_KEY)}`
+        }
+    })
+        .then(res => res.json())
+        .then(data => {
+            if(data.message == "ok") alert('success');
+            else alert(data.message);
+        })
+        .catch(e => console.log(e));
 };
