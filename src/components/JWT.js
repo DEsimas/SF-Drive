@@ -7,67 +7,71 @@ const ACCESS_TOKEN_UPDATAE_DIFF = 60;
 const REFRESH_SERVER_ADDRESS = "http://localhost:8000/authorization/refresh";
 const AUTH_SERVER_ADDRESS = "http://localhost:8000/authorization/send";
 
-const decodeToken = token => {
-    let tokenData;
+// const decodeToken = token => {
+//     let tokenData;
 
-    try{
-        tokenData = JWTdecode(token);
-    } catch (e) {
-        console.warn(e);
-    }
+//     try{
+//         tokenData = JWTdecode(token);
+//     } catch (e) {
+//         console.warn(e);
+//     }
 
-    return tokenData;
-}
+//     return tokenData;
+// }
 
-const isTokenValid = expiersAt => {
-    const currentTime = Math.round(Date.now() / MILLISECONDS_IN_SECOND);
-    const diff = expiersAt - currentTime;
+// const isTokenValid = expiersAt => {
+//     const currentTime = Math.round(Date.now() / MILLISECONDS_IN_SECOND);
+//     const diff = expiersAt - currentTime;
 
-    return diff > ACCESS_TOKEN_UPDATAE_DIFF;
-}
+//     return diff > ACCESS_TOKEN_UPDATAE_DIFF;
+// }
 
-const updateTokens = async () => {
-    const refreshToken = localStorage.getItem(REFRESH_TOKEN_STORAGE_KEY);
+// const updateTokens = async () => {
+//     const refreshToken = localStorage.getItem(REFRESH_TOKEN_STORAGE_KEY);
 
-    const response = await fetch(REFRESH_SERVER_ADDRESS, {
-        method: "POST",
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8'
-        },
-        body: JSON.stringify({ refreshToken })
-    });
+//     const response = await fetch(REFRESH_SERVER_ADDRESS, {
+//         method: "POST",
+//         headers: {
+//             'Content-Type': 'application/json;charset=utf-8'
+//         },
+//         body: JSON.stringify({ refreshToken })
+//     });
 
-    const data = await response.json();
+//     const data = await response.json();
 
-    if(response.ok) {
-        localStorage.setItem(ACCESS_TOKEN_STORAGE_KEY, data.accessToken);
-        localStorage.setItem(REFRESH_TOKEN_STORAGE_KEY, data.refreshToken);
+//     if(response.ok) {
+//         writeTokens(data.accessToken, data.refreshToken);
 
-        return data.accessToken;
-    } else if (data.error) {
-        throw new Error(data.error);
-    }
-}
+//         return data.accessToken;
+//     } else if (data.error) {
+//         throw new Error(data.error);
+//     }
+// }
 
-const getAccessToken = async () => {
-    const accessToken = localStorage.getItem(ACCESS_TOKEN_STORAGE_KEY);
-    const tokenData = decodeToken(accessToken);
-    const isAccessTokenValid = isTokenValid(tokenData.exp);
+export const writeTokens = function(access, refresh){
+    localStorage.setItem(ACCESS_TOKEN_STORAGE_KEY, access);
+    localStorage.setItem(REFRESH_TOKEN_STORAGE_KEY, refresh);
+};
 
-    if(!isAccessTokenValid) {
-        return await updateTokens();
-    }
+// const getAccessToken = async () => {
+//     const accessToken = localStorage.getItem(ACCESS_TOKEN_STORAGE_KEY);
+//     const tokenData = decodeToken(accessToken);
+//     const isAccessTokenValid = isTokenValid(tokenData.exp);
 
-    return accessToken;
-}
+    // if(!isAccessTokenValid) {
+    //     return await updateTokens();
+    // }
 
-export async function callApi() {
-    const accessToken = await getAccessToken();
+//     return accessToken;
+// }
 
-    return fetch(AUTH_SERVER_ADDRESS, {
-        headers: {
-            'Content-Type': 'application/json;charset=utf-8',
-            'Authorization': `Bearer ${accessToken}`
-        }
-    })
-}
+// export async function callApi() {
+//     const accessToken = await getAccessToken();
+
+//     return fetch(AUTH_SERVER_ADDRESS, {
+//         headers: {
+//             'Content-Type': 'application/json;charset=utf-8',
+//             'Authorization': `Bearer ${accessToken}`
+//         }
+//     })
+// }

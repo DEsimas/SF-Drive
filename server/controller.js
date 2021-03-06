@@ -33,10 +33,6 @@ const app = express();
 DAO.connectDB();
 setMiddlewares();
 
-app.get('/', (req, res) => {
-    res.send(service.createTokens({ hello: "world" }));
-});
-
 app.post('/', async (req, res) => {
     res.setHeader("Access-Control-Allow-Origin", WHITE_LIST);
     console.log(req.body);

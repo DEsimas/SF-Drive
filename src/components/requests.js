@@ -1,3 +1,5 @@
+import { writeTokens } from "./JWT";
+
 const SERVER_ADDRESS = "http://localhost:8000/";
 
 export const registrationRequest = data => {
@@ -24,7 +26,10 @@ export const authorizationRequest = data => {
         }
     })
         .then(res => res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data);
+            writeTokens(data.accessToken, data.refreshToken);
+        })
         .catch(e => console.log(e));
 }
 
