@@ -15,6 +15,7 @@ export const registrationRequest = data => {
             .then(data => {
                 console.log(data);
                 if(data.accessToken) writeTokens(data.accessToken, data.refreshToken);
+                alert('success');
             })
             .catch(e => document.getElementById('alert').classList.remove('hide'));
 };
@@ -32,7 +33,11 @@ export const authorizationRequest = data => {
         .then(data => {
             console.log(data);
             writeTokens(data.accessToken, data.refreshToken);
+            alert('success');
         })
         .catch(e => console.log(e));
-}
+};
 
+export const recoveryRequest = data => {
+    console.log('lets go');
+};

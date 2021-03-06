@@ -4,8 +4,18 @@ button{
     outline: none;
 }
 
-.exitButtonWrapper{
-    text-align: right;
+.recWarning{
+    text-align: center;
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+    color: #EB5757;
+    margin-top: 8px;
+}
+
+.recTopSection{
+    display: flex;
+    justify-content: space-between;
     .exitButton{
         padding: 0;
         border: none;
@@ -13,23 +23,35 @@ button{
         margin-right: 25px;
         background-color: white;
     }
+    .backButton{
+        margin-top: 25px;
+        margin-left: 25px;
+    }
 }
 
-.authImageWrapper{
+.recImageWrapper{
     text-align: center;
     margin-top: 70px;
 }
 
-.authHeader{
+.recHeader{
     margin-top: 30px;
     font-family: 'Roboto';
     text-align: center;
     margin-bottom: 0;
 }
 
-.authInputs{
+.recPara{
+    font-family: Roboto;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #1B1B1B;
+}
+
+.recInputs{
     margin: 30px 12px;
-    .authField{
+    .input{
             margin: 0;
             margin-top: 12px;
             background: white;
@@ -42,47 +64,26 @@ button{
             padding: 14px 0px 14px 12px;
             font-size: 14px;
 
-            .authP{
-                padding: 0;
-                margin: 0;
-                font-size: 9px;
+            &:hover{
+                border-color: #61a1999f;
             }
-
-            .input{
-                border:none;
-                outline: none;
-                width: 100%;
-            }
-
-            .authPwdWrapper{
-                display: flex;
-                justify-content: space-between;
-
-                .forgot{
-                    font-family: Roboto;
-                    font-size: 14px;
-                    line-height: 16px;
-                    color: #508E87;
-                    margin: 0;
-                    margin-right: 12px;
-                    border:none;
-                    cursor: pointer;
-                    background-color: white;
-                    text-decoration: none;
-                }
+            &:focus{
+                border: 2px solid #61A199;
             }
     }
 }
-.authSendformWrapper{
+
+.recSendformWrapper{
     text-align: center;
     margin-right: 20px;
     margin-left: 20px;
-    .authSendform{
+    .recSendform{
         border: none;
         align-items: center;
-        padding: 16px 40px;
         background: #61A199;
         border-radius: 6px;
+        padding-top: 16px;
+        padding-bottom: 16px;
         font-family: Roboto;
         font-size: 16px;
         line-height: 19px;
@@ -92,32 +93,18 @@ button{
     }
 }
 
-.authBottom{
-    margin-top: 40px;
-    border-top: solid rgba(128, 128, 128, 0.808) 1px;
-    text-align: center;
-    padding-top: 30px;
-    .authLink{
-        font-family: Roboto;
-        font-size: 14px;
-        line-height: 16px;
-        color: #508E87;
-        text-decoration: none;
-    }
-}
-
 @media screen and (min-width: 600px) {
-    .authInputs{
+    .recInputs{
         margin-right: 77px;
         margin-left: 77px;
     }
 
-    .authImage{
+    .recImage{
         width: 302px;
         height: 181px;
     }
 
-    .authSendform{
+    .recSendform{
         width: 130px !important;
     }
 }
