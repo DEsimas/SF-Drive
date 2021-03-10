@@ -20,17 +20,17 @@ export const registrationRequest = data => {
             // if(data.accessToken) writeTokens(data.accessToken, data.refreshToken);
             alert('success');
         })
-        .catch(e => document.getElementById('alert').classList.remove('hide'));
+        .catch(e => document.getElementById('alert').classList.remove('hide_'));
 };
 
 export const authorizationRequest = data => {
 
+    console.log(data);
 
-
-    fetch(SERVER_ADDRESS + 'authorization/',
+    fetch(SERVER_ADDRESS + data.email + '/',
         {
             method: "POST",
-            body: JSON.stringify(data),
+            body: JSON.stringify({password: data.password}),
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
@@ -38,8 +38,15 @@ export const authorizationRequest = data => {
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            writeTokens(data.accessToken, data.refreshToken);
+            if(data.message == 'user not found'){
+            
+             alert('user not found');
+            } else {
+               console.log(data);
+            localStorage.setItem(USER_ID_KEY, data.id);
+            // writeTokens(data.accessToken, data.refreshToken);
             alert('success');
+            }
         })
         .catch(e => console.log(e));
 };
