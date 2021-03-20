@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { recoverySendRequest } from './../redux/recovery/actions';
+import { recoverySendRequest } from '../../redux/recovery/actions';
 
-import Recovery from './Recovery/Recovery';
+import Recovery from '../Recovery/Recovery';
 
 const RecoveryContainer = props => ((<Recovery {...props} />));
 

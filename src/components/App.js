@@ -7,9 +7,9 @@ import { Provider } from 'react-redux';
 
 import AboutUs from "./AboutUs/AboutUs.js";
 import FAQ from "./FAQ/FAQ.js";
-import Registration from "./Registration.jsx";
-import Authorization from './Authorization.jsx'
-import Recovery from "./Recovery.jsx";
+import Registration from "./_pages/Registration.jsx";
+import Authorization from './_pages/Authorization.jsx'
+import Recovery from "./_pages/Recovery.jsx";
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 

@@ -16,11 +16,11 @@ export const registrationRequest = data => {
         .then(data => {
             console.log(data);
             localStorage.setItem(USER_ID_KEY, data.id);
-            console.log(USER_ID)
-            // if(data.accessToken) writeTokens(data.accessToken, data.refreshToken);
             alert('success');
         })
-        .catch(e => document.getElementById('alert').classList.remove('hide_'));
+        .catch(e => {
+            document.getElementById('alert').classList.remove('hide_');
+    });
 };
 
 export const authorizationRequest = data => {

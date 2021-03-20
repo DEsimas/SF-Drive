@@ -1,9 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { authorizationSendData } from './../redux/authorization/actions';
+import { authorizationSendData } from '../../redux/authorization/actions';
 
-import Authorization from './Authorization/Authorization';
+import Authorization from '../Authorization/Authorization';
 
 const AuthorizationContainer = props => ((<Authorization {...props} />));
 
