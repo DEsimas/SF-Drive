@@ -14,75 +14,57 @@ export const registrationRequest = data => {
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-            localStorage.setItem(USER_ID_KEY, data.id);
-            alert('success');
+            if (data.statusCode == 400) alert(data.message);
+            else if (data.statusCode == 500) alert("Server Error!");
+            else {
+                alert("success");
+            };
         })
         .catch(e => {
             document.getElementById('alert').classList.remove('hide_');
-    });
+            alert("Server Error!");
+        });
 };
 
 export const authorizationRequest = data => {
-
-    console.log(data);
-
-    fetch(SERVER_ADDRESS + data.email + '/',
+    fetch(SERVER_ADDRESS + "auth/",
         {
             method: "POST",
-            body: JSON.stringify({password: data.password}),
+            body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
         })
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-            if(data.message == 'user not found'){
-            
-             alert('user not found');
-            } else {
-               console.log(data);
-            localStorage.setItem(USER_ID_KEY, data.id);
-            // writeTokens(data.accessToken, data.refreshToken);
-            alert('success');
+            if (data.statusCode == 400 || data.statusCode == 404) alert(data.message);
+            else if (data.statusCode == 500) alert("Server Error!");
+            else {
+                alert("success");
             }
         })
-        .catch(e => console.log(e));
+        .catch(e => {
+            alert("Server Error!");
+            console.log(e)
+        });
 };
 
 export const recoveryRequest = data => {
-    let userID = localStorage.getItem(USER_ID_KEY);
-
-    console.log(userID);
-
-    let isCorrect = true;
-
-    fetch(SERVER_ADDRESS + userID + '/')
+    fetch(SERVER_ADDRESS + data.email,
+        {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        })
         .then(res => res.json())
-        .then(res => {
-            if (res.email != data.email) {
-                alert("Неверная почта");
-                isCorrect = false;
-            };
-
-            if (!isCorrect) return 1;
-
-            fetch(SERVER_ADDRESS + userID + '/',
-                {
-                    method: "PUT",
-                    body: JSON.stringify(data),
-                    headers: {
-                        'Content-Type': 'application/json;charset=utf-8',
-                    }
-                })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.message != "user not found") alert('success');
-                    else alert(data.message);
-                })
-                .catch(e => console.log(e));
+        .then(data => {
+            if (data.statusCode == 404) alert(data.message);
+            else alert("success");
+        })
+        .catch(e => {
+            alert("Server Error!");
+            console.log(e)
         });
-
-
 };

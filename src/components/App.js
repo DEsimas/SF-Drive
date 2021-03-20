@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { createStore } from "redux";
+import { compose, createStore } from "redux";
 
 import rootReducer from './../redux/reducer';
 import { Provider } from 'react-redux';
@@ -10,6 +10,14 @@ import FAQ from "./FAQ/FAQ.js";
 import Registration from "./_pages/Registration.jsx";
 import Authorization from './_pages/Authorization.jsx'
 import Recovery from "./_pages/Recovery.jsx";
+// import createSaga from 'redux-saga';
+
+// const middleware = createSaga();
+// const middlewares = [
+//     middleware,
+// ];
+
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || compose;
 
 const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
