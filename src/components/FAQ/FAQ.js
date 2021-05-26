@@ -3,6 +3,7 @@ import React from "react";
 import Header from "./../Common/Header.js";
 import Questions from './Questions.js';
 import Footer from"./../Common/Footer.js";
+import Authorization from './../_pages/Authorization.jsx';
 
 import "./../../styles/FAQ/FAQmain.scss";
 

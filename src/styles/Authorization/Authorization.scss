@@ -12,6 +12,7 @@ button{
         margin-top: 25px;
         margin-right: 25px;
         background-color: white;
+        cursor: pointer;
     }
 }
 
@@ -97,6 +98,7 @@ button{
     border-top: solid rgba(128, 128, 128, 0.808) 1px;
     text-align: center;
     padding-top: 30px;
+    padding-bottom: 20px;
     .authLink{
         font-family: Roboto;
         font-size: 14px;

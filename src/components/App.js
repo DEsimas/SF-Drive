@@ -8,8 +8,13 @@ import { Provider } from 'react-redux';
 import AboutUs from "./AboutUs/AboutUs.js";
 import FAQ from "./FAQ/FAQ.js";
 import Registration from "./_pages/Registration.jsx";
-import Authorization from './_pages/Authorization.jsx'
+import Authorization from './_pages/Authorization.jsx';
 import Recovery from "./_pages/Recovery.jsx";
+import Mobile from "./Common/Mobile.js";
+
+import "./../styles/_Common/authorizationFLOAT.scss";
+import "./../styles/_Common/recovery.scss";
+
 // import createSaga from 'redux-saga';
 
 // const middleware = createSaga();
@@ -26,12 +31,15 @@ function App() {
     return(
     <>
         <Provider store={store}>
+            <div id="logIn" className="hide auth"><Authorization/></div>
+            <div id="rec" className="hide rec"><Recovery/></div>
+            <div id="mobileMenu" className="hide menu"><Mobile/></div>
             <Switch>
                 <Route path="/AboutUs" className="page" id="aboutUs"><AboutUs/></Route>
                 <Route path="/FAQ" className="page" id="FAQ"><FAQ/></Route>
                 <Route path="/Registration" className="page" id="Registration"><Registration/></Route>
                 <Route path="/Recovery" className="page" id="Recovery"><Recovery/></Route>
-                <Route path="/" className="page" id="Authorization"><Authorization/></Route>
+                <Route path="/Auth" className="page" id="Authorization"><Authorization/></Route>
             </Switch>
         </Provider>
     </>);

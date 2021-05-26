@@ -22,10 +22,12 @@ button{
         margin-top: 25px;
         margin-right: 25px;
         background-color: white;
+        cursor: pointer;
     }
     .backButton{
         margin-top: 25px;
         margin-left: 25px;
+        cursor: pointer;
     }
 }
 
@@ -77,6 +79,7 @@ button{
     text-align: center;
     margin-right: 20px;
     margin-left: 20px;
+    padding-bottom: 20px;
     .recSendform{
         border: none;
         align-items: center;

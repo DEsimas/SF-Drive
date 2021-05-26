@@ -19,11 +19,21 @@ function Recovery(props) {
         }
     };
 
+    function back(){
+        document.getElementById("logIn").classList.remove("hide");
+        document.getElementById("rec").classList.add("hide");
+    }
+
+    function hide(){
+        document.getElementById("rec").classList.add("hide");
+    }
+
     return (
         <>
+        <div className="recovery">
             <div className="recTopSection">
-                <img className="backButton" src="./assets/backArrow.svg"/>
-                <img className="exitButton" src="./assets/cross.svg"/>
+                <img onClick={ back } className="backButton" src="./assets/backArrow.svg"/>
+                <img onClick={ hide } className="exitButton" src="./assets/cross.svg"/>
             </div>
             <div className="recContent">
                 <div className="recImageWrapper">
@@ -40,6 +50,7 @@ function Recovery(props) {
             </div>
             <div className="recSendformWrapper">
             <button onClick={handleClick} className="recSendform">Отправить</button>
+            </div>
             </div>
         </>
     );

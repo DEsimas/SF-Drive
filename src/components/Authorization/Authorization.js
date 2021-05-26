@@ -7,10 +7,21 @@ function Authorization(props){
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
+    function hide() {
+        document.getElementById("logIn").classList.add("hide");
+    }
+
+    function showRec(){
+        document.getElementById("rec").classList.remove("hide");
+        document.getElementById("logIn").classList.add("hide");
+    }
+
     return(
         <>
+        <div>
+        <div className="authWrapper">        
             <div className="exitButtonWrapper">
-            <button className="exitButton">
+            <button onClick={ hide } className="exitButton">
                 <img src="./assets/cross.svg"/>
             </button>
             </div>
@@ -27,7 +38,7 @@ function Authorization(props){
                     <p className="authP">Пароль</p>
                     <div className="authPwdWrapper">
             	    <input onChange={e => setPassword(e.target.value)} value={password} type="password" className="input" id="pwd" placeholder="Пароль"/>
-                    <a href="http://localhost:4200/Recovery" className="forgot">Забыли?</a>
+                    <a /*href="http://localhost:4200/Recovery"*/ onClick={ showRec } className="forgot">Забыли?</a>
                     </div>
 			    </div>
             </div>
@@ -37,6 +48,8 @@ function Authorization(props){
             <div className="authBottom">
                 <a href="http://localhost:4200/Registration" className="authLink">Зарегистрироваться</a>
             </div>
+        </div>
+        </div>
         </>
     );
 };
