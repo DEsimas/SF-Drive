@@ -27,26 +27,14 @@ export const registrationRequest = data => {
 };
 
 export const authorizationRequest = data => {
-    fetch(SERVER_ADDRESS + "auth/",
+    return( fetch(SERVER_ADDRESS + "auth/",
         {
             method: "POST",
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json;charset=utf-8'
             }
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.statusCode == 400 || data.statusCode == 404) alert(data.message);
-            else if (data.statusCode == 500) alert("Server Error!");
-            else {
-                alert("success");
-            }
-        })
-        .catch(e => {
-            alert("Server Error!");
-            console.log(e)
-        });
+        }))
 };
 
 export const recoveryRequest = data => {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { authorizationSendData } from '../../redux/authorization/actions';
+import { authorizationSendData, auth_send } from '../../redux/authorization/actions';
 
 import Authorization from '../Authorization/Authorization';
 
@@ -10,7 +10,7 @@ const AuthorizationContainer = props => ((<Authorization {...props} />));
 const mapStateToProps = state => ({});
 
 const mapDispatchToProps = {
-    authorizationSendData
+    auth_send
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthorizationContainer);

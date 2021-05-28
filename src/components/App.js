@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import { compose, createStore } from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
 
 import rootReducer from './../redux/reducer';
 import { Provider } from 'react-redux';
@@ -15,7 +15,7 @@ import Mobile from "./Common/Mobile.js";
 import "./../styles/_Common/authorizationFLOAT.scss";
 import "./../styles/_Common/recovery.scss";
 
-// import createSaga from 'redux-saga';
+import thunk from 'redux-thunk';
 
 // const middleware = createSaga();
 // const middlewares = [
@@ -23,8 +23,10 @@ import "./../styles/_Common/recovery.scss";
 // ];
 
 // const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() || compose;
+const middlewares = [thunk];
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const store = createStore(rootReducer, composeEnhancers(applyMiddleware(...middlewares)));
 
 function App() {
 

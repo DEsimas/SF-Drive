@@ -43,7 +43,7 @@ function Authorization(props){
 			    </div>
             </div>
             <div className="authSendformWrapper">
-            <button onClick={e => props.authorizationSendData({email: email, password: password})} className="authSendform">Войти</button>
+            <button onClick={e => props.auth_send({email: email, password: password})} className="authSendform">Войти</button>
             </div>
             <div className="authBottom">
                 <a href="http://localhost:4200/Registration" className="authLink">Зарегистрироваться</a>
