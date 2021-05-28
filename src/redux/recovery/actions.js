@@ -7,7 +7,7 @@ export const recoverySendRequest = data => ({ type: RECOVERY_SEND_REQUEST, paylo
 export const RECOVERY_REQUEST = "RECOVERY_REQUEST";
 export const RECOVERY_SUCCESS = "RECOVERY_SUCCESS";
 export const RECOVERY_FAILURE = "RECOVERY_FAILURE";
-export const RECOVERY_SEND = "RECOVERY_SETD";
+export const RECOVERY_SEND = "RECOVERY_SEND";
 
 export const recovery_request = (data) => ({type:RECOVERY_REQUEST, payload: data});
 export const recovery_success = (user) => ({type:RECOVERY_SUCCESS, payload: user});

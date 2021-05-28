@@ -4,7 +4,7 @@ export const AUTHORIZATION_SEND_DATA = 'AUTHORIZATION_SEND_DATA';
 export const AUTH_REQUEST = "AUHT_REQUEST";
 export const AUTH_SUCCESS = "AUTH_SUCCESS";
 export const AUTH_FAILURE = "AUTH_FAILURE";
-export const AUTH_SEND = "AUTH_SETD";
+export const AUTH_SEND = "AUTH_SEND";
 
 export const authorizationSendData = data => ({type:AUTHORIZATION_SEND_DATA, payload: data});
 export const auth_request = (data) => ({type:AUTH_REQUEST, payload: data});

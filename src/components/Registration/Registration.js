@@ -35,7 +35,7 @@ function Registration(props) {
 
     const handleClick = () => {
         handleErrors();
-        props.registrationSendData(getData())
+        props.registration_send(getData())
     }
 
     const [name, setName] = useState("");    
