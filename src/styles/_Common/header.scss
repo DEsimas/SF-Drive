@@ -25,6 +25,14 @@ header{
     .burger{
         margin-right: 23px;
     }
+    
+    .avatar{
+        font-family: roboto500;
+        vertical-align: middle;
+        margin-top: 8px;
+        margin-left: 18px;
+        margin-right: 18px;
+    }
 
     @media screen and (min-width: 600px){
         margin-top: 30px;
