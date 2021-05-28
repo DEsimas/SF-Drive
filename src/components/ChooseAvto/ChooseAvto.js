@@ -21,7 +21,7 @@ function ChooseAvto(props) {
                         </div>
                         <div className="rentPeriod">
                             <span>Период аренды</span>
-                            <input type="text"></input>
+                            <input type="date"></input>
                         </div>
                         <div className="category">
                             <span>Категория</span>

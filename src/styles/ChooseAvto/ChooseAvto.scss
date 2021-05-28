@@ -1,5 +1,72 @@
 @import "./../_Common/_variables.scss";
 
+.RentHeader{
+    font-family: Roboto500;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+    color: #1B1B1B;
+    margin-top: 100px;
+}
+.filters{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    div{
+        display: inline;
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+    span{
+        display: block;
+        font-family: Roboto;
+        font-size: 9px;
+        color: #828282;
+        margin-top: 8px;
+    }
+    input{
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #1B1B1B;
+        margin-top: 2px;
+        margin-bottom: 7px;
+        border: none;
+        :focus{
+            border: none;
+        }
+    }
+    .place{
+        width: 330px;
+    }
+    .category{
+        width: 330px;
+    }
+    .rentPeriod{
+        width: 215px;
+    }
+    .findButton{
+        margin-left: 18px;
+        width: 158px;
+        background: #61A199;
+        border-radius: 6px;
+        color: white;
+        font-family: roboto;
+        border: none;
+        cursor: pointer;
+    }
+}
+.recomendationHeader{
+    margin-top: 100px;
+    font-family: Roboto500;
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    color: #1B1B1B;
+    margin-bottom: 50px;
+}
+
 .cars{
     justify-content: center;
     display: grid;
