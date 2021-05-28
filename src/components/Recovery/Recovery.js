@@ -11,7 +11,7 @@ function Recovery(props) {
     const handleClick = () => {
         document.getElementsByClassName("recWarning")[0].innerHTML = "";
         if(pwd === REpwd && pwd.length > 6) {
-            props.recoverySendRequest({email: email, password: pwd});
+            props.recovery_send({email: email, password: pwd});
         } else if(pwd.length < 7) {
             document.getElementsByClassName("recWarning")[0].innerHTML = "Слишком короткий пароль";
         } else {

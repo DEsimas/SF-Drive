@@ -10,7 +10,6 @@ export const authorization = (state = INITIAL_STATE, action) => {
                 ...state,
                 user: action.payload,
             }
-            console.log(state);
         return state;
         case AUTH_FAILURE:
             console.log(action.payload);

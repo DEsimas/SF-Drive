@@ -38,7 +38,7 @@ export const authorizationRequest = data => {
 };
 
 export const recoveryRequest = data => {
-    fetch(SERVER_ADDRESS + data.email,
+    return fetch(SERVER_ADDRESS + data.email,
         {
             method: "POST",
             body: JSON.stringify(data),
@@ -46,13 +46,4 @@ export const recoveryRequest = data => {
                 'Content-Type': 'application/json;charset=utf-8'
             }
         })
-        .then(res => res.json())
-        .then(data => {
-            if (data.statusCode == 404) alert(data.message);
-            else alert("success");
-        })
-        .catch(e => {
-            alert("Server Error!");
-            console.log(e)
-        });
 };
