@@ -8,76 +8,88 @@ export const ChooseAvto = (state = INITIAL_STATE, action) => {
             state = {
                 cars: [
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/412189765866225667/847637882779729920/unknown.png",
                         imgAvatar: "https://cdn.discordapp.com/attachments/646409261479493682/847806703525560320/herrfloppa_20210528_14.png",
-                        name: "1",
-                        price: "11",
+                        name: "111111111",
+                        price: "4454351",
+                        id: 1
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/412189765866225667/847648511654887424/unknown.png",
                         imgAvatar: "https://cdn.discordapp.com/attachments/646409261479493682/847806555801911347/IMG_20210527_145356.png",
-                        name: "2",
-                        price: "22",
+                        name: "2222222222",
+                        price: "465131",
+                        id: 2
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/412189765866225667/847422428007366656/unknown.png",
                         imgAvatar: "https://cdn.discordapp.com/attachments/646409261479493682/847804880840425502/babe-know-everything-about-me-right-of-course-baby-why-28405081.png",
-                        name: "3",
-                        price: "33",
+                        name: "33333333333333333",
+                        price: "34534533",
+                        id: 3
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "https://cdn.discordapp.com/attachments/646409261479493682/847804160085721128/unknown.png",
-                        name: "4",
-                        price: "44",
+                        name: "444444444444444",
+                        price: "465454",
+                        id: 4
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "",
-                        name: "5",
-                        price: "55",
+                        name: "5555555555555555",
+                        price: "554535",
+                        id: 5
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "",
-                        name: "6",
-                        price: "66",
+                        name: "66666666666",
+                        price: "66453453",
+                        id: 6
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "",
-                        name: "7",
-                        price: "77",
+                        name: "7777777777777",
+                        price: "74537",
+                        id: 7
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "",
-                        name: "8",
-                        price: "88",
+                        name: "888888888888",
+                        price: "8453458",
+                        id: 8
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "",
-                        name: "9",
-                        price: "99",
+                        name: "99999999",
+                        price: "453499",
+                        id: 9
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "",
-                        name: "0",
-                        price: "00",
+                        name: "0000000000",
+                        price: "045450",
+                        id: 10
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "",
-                        name: "a",
-                        price: "aa",
+                        name: "aaaaaaaaa",
+                        price: "1616",
+                        id: 11
                     },
                     {
-                        imgCar: "",
+                        imgCar: "https://cdn.discordapp.com/attachments/781177167769632777/847195318478569542/G8Hath1norU.jpg",
                         imgAvatar: "",
-                        name: "b",
-                        price: "bb",
+                        name: "bbbbbbbbbbbb",
+                        price: "6165",
+                        id: 12
                     },
                 ]
             }
