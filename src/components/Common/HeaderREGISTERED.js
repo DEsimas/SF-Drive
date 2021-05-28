@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 
 import "./../../styles/_Common/header.scss";
 
+const CHOOSE_PATH = "http://localhost:4200/Choose";
+
 function HeaderREGISTERED() {
 
     const [mobileSwitch, setSwitch] = useState(false); 
@@ -27,7 +29,7 @@ function HeaderREGISTERED() {
                 </button>
                 <div className="PcMenu">
                     <nav>
-                        <a>Бронирования</a>
+                        <a href={ CHOOSE_PATH }>Бронирования</a>
                         <a>Мои автомобили</a>
                         <a>Сообщения</a>
                     </nav>

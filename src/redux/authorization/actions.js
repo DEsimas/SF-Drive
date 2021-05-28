@@ -6,6 +6,10 @@ export const AUTH_SUCCESS = "AUTH_SUCCESS";
 export const AUTH_FAILURE = "AUTH_FAILURE";
 export const AUTH_SEND = "AUTH_SEND";
 
+export const LOAD_USER = "LOAD_USER";
+
+export const load_user = () => ({type: LOAD_USER});
+
 export const authorizationSendData = data => ({type:AUTHORIZATION_SEND_DATA, payload: data});
 export const auth_request = (data) => ({type:AUTH_REQUEST, payload: data});
 export const auth_success = (user) => ({type:AUTH_SUCCESS, payload: user});
