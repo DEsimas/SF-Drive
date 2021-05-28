@@ -74,3 +74,45 @@
     grid-column-gap: 21px;
     grid-row-gap: 30px;
 }
+
+@media screen and (max-width: 600px){
+    .RentHeader{
+        margin-top: 60px;
+        font-size: 32px;
+    }
+    .filters{
+        margin-top: 30px;
+        display: block;
+        text-align: center;
+        margin-right: 20px;
+        margin-left: 20px;
+        div{
+            width: 100% !important;
+            display: block;
+            text-align: left;
+            input{
+                width: 95%;
+            }
+        }
+    }
+    .rentPeriod{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .findButton{
+        margin-left: 0px !important;
+        margin-top: 10px;
+        width: 100% !important;
+        display: block;
+        height: 44px;
+    }
+    .recomendationHeader{
+        font-size: 24px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .cars{
+        display: block;
+    }
+}
