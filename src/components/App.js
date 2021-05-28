@@ -11,13 +11,14 @@ import Registration from "./_pages/Registration.jsx";
 import Authorization from './_pages/Authorization.jsx';
 import Recovery from "./_pages/Recovery.jsx";
 import Mobile from "./Common/Mobile.js";
+import ChooseAvto from "./_pages//ChooseAvto.jsx";
 
 import "./../styles/_Common/authorizationFLOAT.scss";
 import "./../styles/_Common/recovery.scss";
 
 import thunk from 'redux-thunk';
-import ChooseAvto from "./ChooseAvto/ChooseAvto";
 import { load_user } from "../redux/authorization/actions";
+import { get_recommendations } from "../redux/chooseAvto/actions";
 
 const middlewares = [thunk];
 
@@ -26,10 +27,9 @@ const store = createStore(rootReducer, composeEnhancers(applyMiddleware(...middl
 
 function App() {
 
-    
-
     useEffect(() => {
         store.dispatch(load_user());
+        store.dispatch(get_recommendations());
     });
 
     return(

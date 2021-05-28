@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { authorizationSendData, auth_send } from '../../redux/authorization/actions';
+import { auth_send } from '../../redux/authorization/actions';
 
 import Authorization from '../Authorization/Authorization';
 
