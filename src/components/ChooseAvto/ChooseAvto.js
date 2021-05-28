@@ -32,7 +32,7 @@ function ChooseAvto(props) {
                     <h3 className="recomendationHeader">Рекомендуем поблизости</h3>
                         <div className="cars">
                             { useSelector(state => state.ChooseAvto.cars).map((elem, index) => (
-                                <Avto key={elem.id} imgCar={elem.imgCar} imgAvatar={elem.imgAvatar} name={elem.name} price={elem.price}/>
+                                <Avto key={index} imgCar={elem.image} imgAvatar={elem.avatar} name={elem.name} price={elem.price}/>
                             ))}
                     </div>
                 </body>

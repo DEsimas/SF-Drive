@@ -1,10 +1,10 @@
 import { writeTokens, ACCESS_TOKEN_STORAGE_KEY } from "./JWT";
 
-const SERVER_ADDRESS = "http://localhost:3000/registration/";
+const SERVER_ADDRESS = "http://localhost:3000/";
 let USER_ID_KEY = "USER_ID";
 
 export const registrationRequest = data => {
-    return fetch(SERVER_ADDRESS,
+    return fetch(SERVER_ADDRESS + "registration/",
         {
             method: "POST",
             body: JSON.stringify(data),
@@ -15,7 +15,7 @@ export const registrationRequest = data => {
 };
 
 export const authorizationRequest = data => {
-    return( fetch(SERVER_ADDRESS + "auth/",
+    return( fetch(SERVER_ADDRESS  + "registration/" + "auth/",
         {
             method: "POST",
             body: JSON.stringify(data),
@@ -26,7 +26,7 @@ export const authorizationRequest = data => {
 };
 
 export const recoveryRequest = data => {
-    return fetch(SERVER_ADDRESS + data.email,
+    return fetch(SERVER_ADDRESS  + "registration/" + data.email,
         {
             method: "POST",
             body: JSON.stringify(data),
@@ -35,3 +35,13 @@ export const recoveryRequest = data => {
             }
         })
 };
+
+export const getRecommendations = () => {
+    return( fetch(SERVER_ADDRESS + "cars/recommendations",
+        {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        }))
+}

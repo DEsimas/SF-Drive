@@ -9,7 +9,7 @@ function Avto(props) {
             <div className="carAvatarWrapper"><img className="carUserAvatar" src={ props.imgAvatar }></img></div>
             <div className="text">
             <span className="carName"><b>{ props.name }</b></span>
-            <span className="carPrice">{ props.price }</span>
+            <span className="carPrice">{ "от " + props.price + " ₽/сутки" }</span>
             </div>
         </div>
     );
