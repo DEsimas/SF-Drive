@@ -1,0 +1,99 @@
+@import "./../_Common/_variables.scss";
+
+.stepSpan{
+    font-family: Roboto;
+    font-size: 20px;
+    line-height: 147.3%;
+    text-align: center;
+    margin-top: 100px;
+    color: #1B1B1B;
+}
+h1{
+    font-family: Roboto;
+    font-size: 64px;
+    line-height: 120%;
+    text-align: center;
+    margin-top: 14px;
+    margin-bottom: 50px;
+    color: #1B1B1B;
+}
+.main{
+    margin-right: 20%;
+    margin-left: 20%;
+
+    h3{
+        font-family: Roboto;
+        font-size: 36px;
+        line-height: 147.3%;
+        color: #1B1B1B;
+        margin-bottom: 10px;
+    }
+    span{
+        font-family: Roboto;
+        font-size: 14px;
+        line-height: 16px;
+        color: #1B1B1B;
+    }
+    .group2{
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+    .row {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    input{
+        width: 400px;
+        height: 44px;
+        border: 1px solid #E0E0E0;
+        box-sizing: border-box;
+        border-radius: 6px;
+        display: inline;
+    }
+    .year input {
+        width: 155px;
+        margin-right: 245px;
+    }
+    .number input {
+        width: 155px;
+        margin-right: 245px;
+    }
+    .volume input {
+        width: 155px;
+        margin-right: 245px;
+    }
+    .powerInput{
+        margin-right: 70px;
+        input {
+            width: 155px;
+            margin-right: 10px;
+        }
+    }
+    .mileage input {
+        width: 155px;
+        margin-right: 245px;
+    }
+    .priceBlok input {
+        width: 155px;
+        margin-right: 245px;
+    }
+}
+.btnWrap{
+    margin-top: 80px;
+    text-align: center;
+    border-top: 1px #E0E0E0 solid;
+}
+.contButton{
+    margin-top: 17px;
+    margin-bottom: 17px;
+    width: 176px;
+    height: 51px;
+    background: #0da88e;
+    border-radius: 6px;
+    font-family: Roboto500;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+}

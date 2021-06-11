@@ -12,6 +12,7 @@ import Authorization from './_pages/Authorization.jsx';
 import Recovery from "./_pages/Recovery.jsx";
 import Mobile from "./Common/Mobile.js";
 import ChooseAvto from "./_pages//ChooseAvto.jsx";
+import AddCar from './AddCar/AddCar.js';
 
 import "./../styles/_Common/authorizationFLOAT.scss";
 import "./../styles/_Common/recovery.scss";
@@ -39,12 +40,13 @@ function App() {
             <div id="rec" className="hide rec"><Recovery/></div>
             <div id="mobileMenu" className="hide menu"><Mobile/></div>
             <Switch>
-                <Route path="/Choose" className="page" id="ChooseAvto"><ChooseAvto/></Route>
-                <Route path="/AboutUs" className="page" id="aboutUs"><AboutUs/></Route>
+                <Route path="/addcar" className="page" id="AddAvto"><AddCar/></Route>
+                <Route path="/choose" className="page" id="ChooseAvto"><ChooseAvto/></Route>
+                <Route path="/aboutUs" className="page" id="aboutUs"><AboutUs/></Route>
                 <Route path="/FAQ" className="page" id="FAQ"><FAQ/></Route>
-                <Route path="/Registration" className="page" id="Registration"><Registration/></Route>
-                <Route path="/Recovery" className="page" id="Recovery"><Recovery/></Route>
-                <Route path="/Auth" className="page" id="Authorization"><Authorization/></Route>
+                <Route path="/registration" className="page" id="Registration"><Registration/></Route>
+                <Route path="/recovery" className="page" id="Recovery"><Recovery/></Route>
+                <Route path="/auth" className="page" id="Authorization"><Authorization/></Route>
             </Switch>
         </Provider>
     </>);
