@@ -1,5 +1,7 @@
 @import "./../_Common/_variables.scss";
-
+input{
+    font-family: Roboto;
+}
 .stepSpan{
     font-family: Roboto;
     font-size: 20px;
@@ -79,6 +81,9 @@ h1{
         width: 155px;
         margin-right: 245px;
     }
+    .KASKO input{
+        width: 315px;
+    }
 }
 .btnWrap{
     margin-top: 80px;
@@ -96,4 +101,11 @@ h1{
     color: #FFFFFF;
     text-align: center;
     border: none;
+}
+.buy{
+    position: static;
+    text-decoration: none;
+    font-family: Roboto;
+    color: #61A199;
+    font-size: 14px;
 }

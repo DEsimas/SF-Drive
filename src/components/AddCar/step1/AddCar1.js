@@ -1,6 +1,15 @@
 import React from 'react';
 
-function AddCar1() {
+function AddCar1(props) {
+    function saveData() {
+        let Data = {};
+        let shit = ["mark", "model", "year", "number", "VIN", "color", "engineType", "volume", "powerLS", "powerKVT", "transmission", "mileage", "PTS", "STS", "price", "price3", "price5"];
+        shit.forEach((el) => {
+            Data[el] = document.getElementById(el).value;
+        });
+        console.log(Data);
+        props.saveData(Data);
+    };
     return (
         <>
             <datalist id="markList">
@@ -16,62 +25,62 @@ function AddCar1() {
                             <div className="group1">
                                 <div className="mark row">
                                     <span className="fieldSpan">Марка</span>
-                                    <input list="markList" type="text"></input>
+                                    <input id="mark" list="markList" type="text"></input>
                                 </div>
                                 <div className="model row">
                                     <span className="fieldSpan">Модель</span>
-                                    <input list="" type="text"></input>
+                                    <input id="model" list="" type="text"></input>
                                 </div>
                                 <div className="year row">
                                     <span className="fieldSpan">Год выпуска</span>
-                                    <input type="number"></input>
+                                    <input id="year" type="number"></input>
                                 </div>
                                 <div className="number row">
                                     <span className="fieldSpan">Гос. номер</span>
-                                    <input type="number"></input>
+                                    <input id="number" type="number"></input>
                                 </div>
                                 <div className="VIN row">
                                     <span className="fieldSpan">VIN</span>
-                                    <input list="" type="text"></input>
+                                    <input id="VIN" list="" type="text"></input>
                                 </div>
                                 <div className="color row">
                                     <span className="fieldSpan">Цвет</span>
-                                    <input list="" type="text"></input>
+                                    <input id="color" list="" type="text"></input>
                                 </div>
                             </div>
                             <div className="group2">
                                 <div className="engineType row">
                                     <span className="fieldSpan">Тип двигателя</span>
-                                    <input list="" type="text"></input>
+                                    <input id="engineType" list="" type="text"></input>
                                 </div>
                                 <div className="volume row">
                                     <span className="fieldSpan">Объём</span>
-                                    <input type="text"></input>
+                                    <input id="volume" type="text"></input>
                                 </div>
                                 <div className="power row">
                                     <span className="fieldSpan">Мощность</span>
                                     <div className="powerInput">
-                                        <input type="text"></input>
-                                        <input type="text"></input>
+                                        <input id="powerLS" placeholder="100 л.с." type="text"></input>
+                                        <input id="powerKVT" placeholder="73,5499 кВт" type="text"></input>
                                     </div>
                                 </div>
                                 <div className="transmission row">
                                     <span className="fieldSpan">Трансмиссия</span>
-                                    <input list="" type="text"></input>
+                                    <input id="transmission" list="" type="text"></input>
                                 </div>
                             </div>
                             <div className="group3">
                                 <div className="mileage row">
                                     <span className="fieldSpan">Пробег</span>
-                                    <input type="number"></input>
+                                    <input id="mileage" type="number"></input>
                                 </div>
                                 <div className="PTS row">
                                     <span className="fieldSpan">Серия и номер ПТС</span>
-                                    <input type="text"></input>
+                                    <input id="PTS" type="text"></input>
                                 </div>
                                 <div className="STS row">
                                     <span className="fieldSpan">Серия и номер СТС</span>
-                                    <input type="text"></input>
+                                    <input id="STS" type="text"></input>
                                 </div>
                             </div>
                         </div>
@@ -81,15 +90,15 @@ function AddCar1() {
                         <div className="inputs">
                             <div className="price row">
                                 <span className="fieldSpan">Обычная цена</span>
-                                <input type="text"></input>
+                                <input id="price" type="text"></input>
                             </div>
                             <div className="price3 row">
                                 <span className="fieldSpan">Цена при аренде на 3 дня</span>
-                                <input type="text"></input>
+                                <input id="price3" type="text"></input>
                             </div>
                             <div className="price5 row">
                                 <span className="fieldSpan">Цена при аренде более 5 дней</span>
-                                <input type="text"></input>
+                                <input id="price5" type="text"></input>
                             </div>
                         </div>
                     </div>
@@ -98,17 +107,20 @@ function AddCar1() {
                         <div className="inputs">
                             <div className="OSAGO row">
                                 <span className="fieldSpan">Полис ОСАГО</span>
-                                <input type="text"></input>
+                                <input id="OSAGO" type="text"></input>
                             </div>
                             <div className="KASKO row">
                                 <span className="fieldSpan">Полис КАСКО (если есть)</span>
-                                <input type="text"></input>
+                                <div className="kaskoWrapper">
+                                    <input id="KASKO" type="text"></input>
+                                    <a className="buy">Купить каско</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="btnWrap">
-                    <button className="contButton">Продолжить</button>
+                    <button onClick={ saveData } className="contButton">Продолжить</button>
                 </div>
             </div>
         </>

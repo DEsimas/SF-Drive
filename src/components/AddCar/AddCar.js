@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import AddCar1 from './step1/AddCar1';
+import AddCar1 from './step1/AddCar1.jsx';
 import Header from './../Common/Header';
 import HeaderREGISTERED from './../Common/HeaderREGISTERED';
 

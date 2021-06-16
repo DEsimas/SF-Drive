@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import "./../../styles/_Common/header.scss";
 
 const CHOOSE_PATH = "http://localhost:4200/Choose";
+const ADD_PATH = "http://localhost:4200/addcar";
 
 function HeaderREGISTERED() {
 
@@ -30,7 +31,7 @@ function HeaderREGISTERED() {
                 <div className="PcMenu">
                     <nav>
                         <a href={ CHOOSE_PATH }>Бронирования</a>
-                        <a>Мои автомобили</a>
+                        <a href={ ADD_PATH }>Мои автомобили</a>
                         <a>Сообщения</a>
                     </nav>
                     <div class="avatar">{ useSelector(state => state.authorization.user.email) }</div>
