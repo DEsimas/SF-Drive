@@ -12,7 +12,6 @@ export const car_success = (data) => ({type:CAR_SUCCESS, payload: data});
 export const car_failure = (error) => ({type:CAR_FAILURE, payload: error});
 
 export const car_send = (data) => {
-    console.log('aaaaa')
     return dispatch => {
         dispatch(car_request(data));
         return addCarRequest(data)

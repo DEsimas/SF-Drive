@@ -45,8 +45,6 @@ export const getRecommendations = () => {
 }
 
 export const addCarRequest = data => {
-    console.log("yaaaay")
-    console.log(data)
     return( fetch(SERVER_ADDRESS + 'cars/',
     {
         method: "POST",
