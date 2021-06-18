@@ -1,5 +1,3 @@
-import { writeTokens, ACCESS_TOKEN_STORAGE_KEY } from "./JWT";
-
 const SERVER_ADDRESS = "http://localhost:3000/";
 let USER_ID_KEY = "USER_ID";
 
@@ -44,4 +42,17 @@ export const getRecommendations = () => {
                 'Content-Type': 'application/json;charset=utf-8'
             }
         }))
+}
+
+export const addCarRequest = data => {
+    console.log("yaaaay")
+    console.log(data)
+    return( fetch(SERVER_ADDRESS + 'cars/',
+    {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json;charset=utf-8'
+        }
+    }))
 }

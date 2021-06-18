@@ -1,13 +1,15 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
+import { car_send } from '../../../redux/addCar/actions';
 
-function AddCar1(props) {
+function AddCar1(props) {    
     function saveData() {
         let Data = {};
-        let shit = ["mark", "model", "year", "number", "VIN", "color", "engineType", "volume", "powerLS", "powerKVT", "transmission", "mileage", "PTS", "STS", "price", "price3", "price5"];
+        let shit = ["mark", "model", "year", "number", "VIN", "color", "engineType", "volume", "powerLS", "powerKVT", "transmission", "mileage", "PTS", "STS", "price", "price3", "price5", "OSAGO", "KASKO"];
         shit.forEach((el) => {
             Data[el] = document.getElementById(el).value;
         });
-        console.log(Data);
+        Data.ownerID = props.user._id;
         props.saveData(Data);
     };
     return (
@@ -25,62 +27,62 @@ function AddCar1(props) {
                             <div className="group1">
                                 <div className="mark row">
                                     <span className="fieldSpan">Марка</span>
-                                    <input id="mark" list="markList" type="text"></input>
+                                    <input onChange={ saveData } id="mark" list="markList" type="text"></input>
                                 </div>
                                 <div className="model row">
                                     <span className="fieldSpan">Модель</span>
-                                    <input id="model" list="" type="text"></input>
+                                    <input onChange={ saveData } id="model" list="" type="text"></input>
                                 </div>
                                 <div className="year row">
                                     <span className="fieldSpan">Год выпуска</span>
-                                    <input id="year" type="number"></input>
+                                    <input onChange={ saveData } id="year" type="text"></input>
                                 </div>
                                 <div className="number row">
                                     <span className="fieldSpan">Гос. номер</span>
-                                    <input id="number" type="number"></input>
+                                    <input onChange={ saveData } id="number" type="text"></input>
                                 </div>
                                 <div className="VIN row">
                                     <span className="fieldSpan">VIN</span>
-                                    <input id="VIN" list="" type="text"></input>
+                                    <input onChange={ saveData } id="VIN" list="" type="text"></input>
                                 </div>
                                 <div className="color row">
                                     <span className="fieldSpan">Цвет</span>
-                                    <input id="color" list="" type="text"></input>
+                                    <input onChange={ saveData } id="color" list="" type="text"></input>
                                 </div>
                             </div>
                             <div className="group2">
                                 <div className="engineType row">
                                     <span className="fieldSpan">Тип двигателя</span>
-                                    <input id="engineType" list="" type="text"></input>
+                                    <input onChange={ saveData } id="engineType" list="" type="text"></input>
                                 </div>
                                 <div className="volume row">
                                     <span className="fieldSpan">Объём</span>
-                                    <input id="volume" type="text"></input>
+                                    <input onChange={ saveData } id="volume" type="text"></input>
                                 </div>
                                 <div className="power row">
                                     <span className="fieldSpan">Мощность</span>
                                     <div className="powerInput">
-                                        <input id="powerLS" placeholder="100 л.с." type="text"></input>
-                                        <input id="powerKVT" placeholder="73,5499 кВт" type="text"></input>
+                                        <input onChange={ saveData } id="powerLS" placeholder="100 л.с." type="text"></input>
+                                        <input onChange={ saveData } id="powerKVT" placeholder="73,5499 кВт" type="text"></input>
                                     </div>
                                 </div>
                                 <div className="transmission row">
                                     <span className="fieldSpan">Трансмиссия</span>
-                                    <input id="transmission" list="" type="text"></input>
+                                    <input onChange={ saveData } id="transmission" list="" type="text"></input>
                                 </div>
                             </div>
                             <div className="group3">
                                 <div className="mileage row">
                                     <span className="fieldSpan">Пробег</span>
-                                    <input id="mileage" type="number"></input>
+                                    <input onChange={ saveData } id="mileage" type="number"></input>
                                 </div>
                                 <div className="PTS row">
                                     <span className="fieldSpan">Серия и номер ПТС</span>
-                                    <input id="PTS" type="text"></input>
+                                    <input onChange={ saveData } id="PTS" type="text"></input>
                                 </div>
                                 <div className="STS row">
                                     <span className="fieldSpan">Серия и номер СТС</span>
-                                    <input id="STS" type="text"></input>
+                                    <input onChange={ saveData } id="STS" type="text"></input>
                                 </div>
                             </div>
                         </div>
@@ -90,15 +92,15 @@ function AddCar1(props) {
                         <div className="inputs">
                             <div className="price row">
                                 <span className="fieldSpan">Обычная цена</span>
-                                <input id="price" type="text"></input>
+                                <input onChange={ saveData } id="price" type="text"></input>
                             </div>
                             <div className="price3 row">
                                 <span className="fieldSpan">Цена при аренде на 3 дня</span>
-                                <input id="price3" type="text"></input>
+                                <input onChange={ saveData } id="price3" type="text"></input>
                             </div>
                             <div className="price5 row">
                                 <span className="fieldSpan">Цена при аренде более 5 дней</span>
-                                <input id="price5" type="text"></input>
+                                <input onChange={ saveData } id="price5" type="text"></input>
                             </div>
                         </div>
                     </div>
@@ -107,12 +109,12 @@ function AddCar1(props) {
                         <div className="inputs">
                             <div className="OSAGO row">
                                 <span className="fieldSpan">Полис ОСАГО</span>
-                                <input id="OSAGO" type="text"></input>
+                                <input onChange={ saveData } id="OSAGO" type="text"></input>
                             </div>
                             <div className="KASKO row">
                                 <span className="fieldSpan">Полис КАСКО (если есть)</span>
                                 <div className="kaskoWrapper">
-                                    <input id="KASKO" type="text"></input>
+                                    <input onChange={ saveData } id="KASKO" type="text"></input>
                                     <a className="buy">Купить каско</a>
                                 </div>
                             </div>
@@ -120,7 +122,7 @@ function AddCar1(props) {
                     </div>
                 </div>
                 <div className="btnWrap">
-                    <button onClick={ saveData } className="contButton">Продолжить</button>
+                    <button onClick={ () => props.car_send(props.cars.temp) } className="contButton">Продолжить</button>
                 </div>
             </div>
         </>
