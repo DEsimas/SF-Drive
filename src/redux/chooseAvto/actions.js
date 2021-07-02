@@ -26,3 +26,6 @@ export const get_recommendations = () => {
             });
     };
 };
+
+export const CAR_NAME_FILTER_REQUEST = "CAR_NAME_FILTER_REQUEST";
+export const car_name_filter_request = (data) => ({type: CAR_NAME_FILTER_REQUEST, payload: data});

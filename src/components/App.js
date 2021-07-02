@@ -4,6 +4,7 @@ import { applyMiddleware, compose, createStore } from "redux";
 
 import rootReducer from './../redux/reducer';
 import { Provider, useSelector } from 'react-redux';
+import { ApolloProvider } from '@apollo/client'
 
 import AboutUs from "./AboutUs/AboutUs.js";
 import FAQ from "./FAQ/FAQ.js";
@@ -20,6 +21,7 @@ import "./../styles/_Common/recovery.scss";
 import thunk from 'redux-thunk';
 import { load_user } from "../redux/authorization/actions";
 import { get_recommendations } from "../redux/chooseAvto/actions";
+import { apolloClient } from "./../utils/apollo-client.ts";
 
 const middlewares = [thunk];
 
@@ -35,6 +37,7 @@ function App() {
 
     return(
     <>
+    <ApolloProvider client={ apolloClient }>
         <Provider store={store}>
             <div id="logIn" className="hide auth"><Authorization/></div>
             <div id="rec" className="hide rec"><Recovery/></div>
@@ -49,6 +52,7 @@ function App() {
                 <Route path="/auth" className="page" id="Authorization"><Authorization/></Route>
             </Switch>
         </Provider>
+    </ApolloProvider>
     </>);
 }
 
