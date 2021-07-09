@@ -5,6 +5,7 @@ import "./../../styles/_Common/header.scss";
 
 const CHOOSE_PATH = "http://localhost:4200/Choose";
 const ADD_PATH = "http://localhost:4200/addcar";
+const MESSAGES_PATH = "http://localhost:4200/messages";
 
 function HeaderREGISTERED() {
 
@@ -32,7 +33,7 @@ function HeaderREGISTERED() {
                     <nav>
                         <a href={ CHOOSE_PATH }>Бронирования</a>
                         <a href={ ADD_PATH }>Мои автомобили</a>
-                        <a>Сообщения</a>
+                        <a href={ MESSAGES_PATH }>Сообщения</a>
                     </nav>
                     <div class="avatar">{ useSelector(state => state.authorization.user.email) }</div>
                 </div>
