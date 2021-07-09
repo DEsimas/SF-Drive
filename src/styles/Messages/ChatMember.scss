@@ -1,4 +1,40 @@
 @import "./../_Common/_variables.scss";
-.avatar{
-    width: 50px;
+.member {
+    display: flex;
+    justify-content: space-between;
+
+    .right {
+        display: flex;
+
+        .avatar{
+            width: 65px;
+            height: 65px;
+            border-radius: 100px;
+            margin-right: 30px;
+        }
+        .info {
+
+            .Iname {
+                font-family: "Roboto500";
+                font-size: 18px;
+                color: #1B1B1B;
+                margin: 0px;
+                margin-bottom: 5px;
+                margin-top: 10px;
+            }
+
+            .IcarName {
+                font-family: "Roboto";
+                font-size: 14px;
+                color: #828282, 100%;
+                margin: 0px;
+            }
+        }
+    }
+
+    .date {
+        margin: 0;
+        margin-top: 22px;
+        font-family: "Roboto";
+    }
 }

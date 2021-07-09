@@ -13,10 +13,12 @@ function ChatMember(props) {
 	return (
 		<>
             <div className="member">
-                <img className="avatar" src={ props.avatar }/>
-                <div className="info">
-                    <span className="name">{ username }</span>
-                    <span className="carName">{ props.carName }</span>
+                <div className = "right">
+                    <img className="avatar" src={ props.avatar }/>
+                    <div className="info">
+                        <p className="Iname">{ username }</p>
+                        <p className="IcarName">{ props.carName }</p>
+                    </div>
                 </div>
                 <span className="date">{ props.date }</span>
             </div>
