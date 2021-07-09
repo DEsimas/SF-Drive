@@ -4,12 +4,6 @@ import Header from "./../Common/Header.js";
 import HeaderREGISTERED from "./../Common/HeaderREGISTERED.js";
 import { useSelector } from 'react-redux';
 
-/*props{
-    name
-    avatar
-    carName
-    date
-}*/
 import ChatMember from "./ChatMember.js";
 
 import "./../../styles/Messages/Messages.scss";
@@ -21,10 +15,7 @@ function Messages(props) {
 			<main className="messagesMain">
                 <h1 className="messagesHeader">Сообщения</h1>
                 <div className="chats">
-
-                    {/* test */}
-                    <ChatMember className="chat" name="Гд Гошан Гошанович" avatar="https://cdn.discordapp.com/attachments/822098460643033140/862986762615783474/2021-06-28_173127.png" carName="Tayota Camri, 1917" date="09.07.2021"/>
-
+                    { useSelector(state => state.messages.myChats).map((el) => <ChatMember name={ el.name } avatar={ el.avatar } carName={ el.carName } date={ el.date } />) }
                 </div>
             </main>
 		</>
