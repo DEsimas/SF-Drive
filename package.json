@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/DEsimas/SF-Drive#readme",
   "devDependencies": {
+    "@types/socket.io": "^3.0.2",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^7.0.0",
     "cross-env": "^7.0.3",
@@ -52,6 +53,7 @@
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-saga": "^1.1.3",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "socket.io-client": "^4.1.2"
   }
 }

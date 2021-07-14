@@ -2,7 +2,7 @@ import { TEST } from './actions';
 
 
 const INITIAL_STATE = {
-    curentChat: {name: "Гд Гошан Гошанович", avatar: "https://cdn.discordapp.com/attachments/822098460643033140/862986762615783474/2021-06-28_173127.png", carName:"Tayota Camri, 1917", date:"09.07.2021"},
+    currentChat: {name: "Гд Гошан Гошанович", avatar: "https://cdn.discordapp.com/attachments/822098460643033140/862986762615783474/2021-06-28_173127.png", carName:"Tayota Camri, 1917", date:"09.07.2021"},
     myChats: [
         {
             name: "Гд Гошан Гошанович", avatar: "https://cdn.discordapp.com/attachments/822098460643033140/862986762615783474/2021-06-28_173127.png", carName:"Tayota Camri, 1917", date:"09.07.2021"
