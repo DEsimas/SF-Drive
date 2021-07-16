@@ -13,6 +13,9 @@ function Chat(props) {
     const username = member.name.split(' ')[1] + ' ' + member.name.split(' ')[0][0] + '.';
 	
 	const user = useSelector(state => (state.authorization.user));
+
+	//get messages from state
+	const messages = useSelector(state => (state.messages.messages));
 	
 	useEffect(() => {
 		//get socket
@@ -32,6 +35,7 @@ function Chat(props) {
 		//subscribe on new messages
 		socket.on('message', (message) => {
 			console.log(message);
+			props.add_new_message(message);
 		});
 	});
 
