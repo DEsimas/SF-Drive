@@ -12,19 +12,27 @@ function Chat(props) {
 	const member = useSelector(state => (state.messages.currentChat));
     const username = member.name.split(' ')[1] + ' ' + member.name.split(' ')[0][0] + '.';
 	
+	const user = useSelector(state => (state.authorization.user));
 	
-	useEffect(() => {		
+	useEffect(() => {
+		//get socket
 		const socket = openSocket(MESSAGES_URL);
 
-		socket.on('new_message', (status) => {
+		//subscribe on auth event
+		socket.on('auth', (status) => {
 			if(status.success) {
 				console.log("ws success");
 				return;
 			}
-			console.log("error with ws");
+			console.warn(status.msg);
 		});
+		//send auth when entering chat
+		socket.emit('auth', user);
 
-		socket.emit('new_message', {cum: "yes"});
+		//subscribe on new messages
+		socket.on('message', (message) => {
+			console.log(message);
+		});
 	});
 
 	return (
