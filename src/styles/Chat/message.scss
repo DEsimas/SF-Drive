@@ -1,0 +1,41 @@
+@import "./../_Common/_variables.scss";
+
+.msg_wrp {
+    font-family: 'roboto';
+    font-size: 16px;
+    display: block;
+}
+.msg{
+    border-radius: 50px;
+    display: inline-block;
+    border-radius: 50px;
+}
+.msgM{
+    text-align: start;
+}
+.msgH{
+    text-align: end;
+}
+.my{
+    color: #1B1B1B;
+    text-align: left;
+    background-color: #F2F2F2;
+}
+.his{
+    color: #FFFFFF;
+    background-color: #61A199;
+    text-align: right;
+}
+.text{
+    margin-top: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.date {
+    color: rgb(207, 206, 206);
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 5px;
+    font-size: 12px;
+}

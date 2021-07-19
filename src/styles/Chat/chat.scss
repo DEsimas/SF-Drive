@@ -1,0 +1,23 @@
+@import "./../_Common/_variables.scss";
+
+.chatName{
+    font-family: 'roboto500';
+    font-size: 20px;
+    text-align: center;
+    color: #1B1B1B;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+.backButton {
+    text-decoration: none;
+    font-family: 'roboto';
+    font-size: 14px;
+    color: #508E87;
+    margin-left: 250px;
+    position: absolute;
+}
+.msgs {
+    width: 50%;
+    margin-left: 25%;
+}
