@@ -1,4 +1,4 @@
-const SERVER_ADDRESS = "http://localhost:3000/";
+export const SERVER_ADDRESS = "http://localhost:3000/";
 let USER_ID_KEY = "USER_ID";
 
 export const registrationRequest = data => {

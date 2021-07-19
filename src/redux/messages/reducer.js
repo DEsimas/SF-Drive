@@ -1,12 +1,13 @@
-import { ADD_NEW_MESSAGE } from './actions';
+import { SERVER_ADDRESS } from '../../components/requests';
+import { ADD_NEW_CHAT, ADD_NEW_MESSAGE } from './actions';
 
 
 const INITIAL_STATE = {
     currentChat: {
         name: "Гд Гошан Гошанович",
         avatar: "https://cdn.discordapp.com/attachments/822098460643033140/862986762615783474/2021-06-28_173127.png",
-        carName:"Tayota Camri, 1917",
-        date:"09.07.2021",
+        carName: "Tayota Camri, 1917",
+        date: "09.07.2021",
         _id: "60e80fd3dd33bf1488683042",
         messages: [
             {
@@ -29,8 +30,8 @@ const INITIAL_STATE = {
         {
             name: "Гд Гошан Гошанович",
             avatar: "https://cdn.discordapp.com/attachments/822098460643033140/862986762615783474/2021-06-28_173127.png",
-            carName:"Tayota Camri, 1917",
-            date:"09.07.2021",
+            carName: "Tayota Camri, 1917",
+            date: "09.07.2021",
             messages: [],
             _id: "60e80fd3dd33bf1488683042"
         }
@@ -38,16 +39,36 @@ const INITIAL_STATE = {
 };
 
 export const messages = (state = INITIAL_STATE, action) => {
-    switch (action.type){
+    switch (action.type) {
         case ADD_NEW_MESSAGE:
             state.myChats.forEach((el, index) => {
-                if(el._id == action.payload.senderID || el._id == action.payload.receiverID) state.myChats[index].messages.push(action.payload);
+                if (el._id == action.payload.senderID || el._id == action.payload.receiverID) state.myChats[index].messages.push(action.payload);
             });
 
             state.myChats.forEach((el, index) => {
-                if(el._id == state.currentChat._id) state.currentChat = el;
+                if (el._id == state.currentChat._id) state.currentChat = el;
             });
-        return state;
+            return state;
+        case ADD_NEW_CHAT:
+
+            let data = action.payload.chats;
+            data[data.length] = action.payload.chat;
+
+            let user = fetch(SERVER_ADDRESS + "registration/" + action.payload.id,
+                {
+                    method: "PUT",
+                    body: JSON.stringify({ chats: data }),
+                    headers: {
+                        'Content-Type': 'application/json;charset=utf-8'
+                    }
+                })
+                .then(res => (res.json()))
+                .then(data => {
+                    console.log(data)
+                    localStorage.setItem("user", JSON.stringify(data));
+                    location.assign("http://localhost:4200/messages")
+                })
+            return state;
         default:
             return state;
     }

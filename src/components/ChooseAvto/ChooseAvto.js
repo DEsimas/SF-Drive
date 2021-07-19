@@ -4,13 +4,14 @@ import { useSelector } from 'react-redux';
 import Footer from "../Common/Footer.js";
 import Header from "./../Common/Header.js";
 import HeaderREGISTERED from "./../Common/HeaderREGISTERED.js";
-import Avto from "./Avto.js";
+import Avto from "./../_pages/Avto.jsx";
 import "./../../styles/ChooseAvto/ChooseAvto.scss"
 import { useMutation, useQuery } from "@apollo/react-hooks";
 import { GET_CARS_BY_NAME } from "./../../utils/graphql-requests.ts";
 import { useState } from "react";
 
 function ChooseAvto(props) {
+    
     const [ name, setName ] = useState('');
     const getSearch = () => {
         sendRequest();
@@ -50,7 +51,7 @@ function ChooseAvto(props) {
                     <h3 className="recomendationHeader">Рекомендуем поблизости</h3>
                         <div className="cars">
                             { useSelector(state => state.ChooseAvto.cars).map((elem, index) => (
-                                <Avto key={index} imgCar={elem.image} imgAvatar={elem.avatar} name={elem.name} price={elem.price}/>
+                                <Avto _id={elem.ownerID} key={index} imgCar={elem.image} imgAvatar={elem.avatar} name={elem.name} price={elem.price}/>
                             ))}
                     </div>
                 </body>
