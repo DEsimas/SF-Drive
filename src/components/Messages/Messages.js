@@ -62,7 +62,7 @@ function Messages(props) {
 			<main className="messagesMain">
 				<h1 className="messagesHeader">Сообщения</h1>
 				<div className="chats">
-					{useSelector(state => state.messages.myChats).map((el) => <ChatMember name={el.name} avatar={el.avatar} carName={el.carName} date={el.date} id={el._id} />)}
+					{useSelector(state => state.messages.myChats).map((el) => <ChatMember set_current_chat = { props.set_current_chat } name={el.name} avatar={el.avatar} carName={el.carName} date={el.date} id={el._id} />)}
 				</div>
 			</main>
 		</>

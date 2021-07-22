@@ -1,31 +1,9 @@
 import { SERVER_ADDRESS } from '../../components/requests';
-import { ADD_NEW_CHAT, ADD_NEW_MESSAGE, SAVE_MY_CHATS } from './actions';
+import { ADD_NEW_CHAT, ADD_NEW_MESSAGE, SAVE_MY_CHATS, SET_CURRENT_CHAT } from './actions';
 
 
 const INITIAL_STATE = {
-    currentChat: {
-        name: "Гд Гошан Гошанович",
-        avatar: "https://cdn.discordapp.com/attachments/822098460643033140/862986762615783474/2021-06-28_173127.png",
-        carName: "Tayota Camri, 1917",
-        date: "09.07.2021",
-        _id: "60e80fd3dd33bf1488683042",
-        messages: [
-            {
-                senderID: "60e80fd3dd33bf1488683042",
-                receiverID: "60db37524768471e3c43f7da",
-                content: "hello world",
-                date: "16-07-2021",
-                _id: "testMSG",
-            },
-            {
-                senderID: "60db37524768471e3c43f7da",
-                receiverID: "60e80fd3dd33bf1488683042",
-                content: "i love amogus",
-                date: "16-07-2021",
-                _id: "testMSG2",
-            },
-        ]
-    },
+    currentChat: {},
     myChats: [],
 };
 
@@ -57,7 +35,7 @@ export const messages = (state = INITIAL_STATE, action) => {
                 .then(data => {
                     console.log(data)
                     localStorage.setItem("user", JSON.stringify(data));
-                    location.assign("http://localhost:4200/messages")
+                    location.assign("http://localhost:4200/messages");
                 })
             return state;
         case SAVE_MY_CHATS:
@@ -65,6 +43,25 @@ export const messages = (state = INITIAL_STATE, action) => {
                 ...state,
                 myChats: action.payload
             };
+            return state;
+        case SET_CURRENT_CHAT:
+            //we need to write chat with id from payload to state.currentChat
+
+            const id = action.payload;
+
+            const chat = state.myChats.find((el) => {
+                if(el._id == id) return true;
+                else return false;
+            });
+
+            //changing state with COOL es6 syntaxis
+            state = {
+                ...state,
+                currentChat: chat
+            };
+
+            //redirecting to chat page
+            location.assign("http://localhost:4200/chat");
             return state;
         default:
             return state;

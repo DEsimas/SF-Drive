@@ -9,10 +9,14 @@ function ChatMember(props) {
         carName
         date
     }*/
+    function gotoChat() {
+        props.set_current_chat(props.id);
+    };
+
     const username = props.name.split(' ')[1] + ' ' + props.name.split(' ')[0][0] + '.';
 	return (
 		<>
-            <div className="member">
+            <div onClick={ gotoChat } className="member">
                 <div className = "right">
                     <img className="avatar" src={ props.avatar }/>
                     <div className="info">
