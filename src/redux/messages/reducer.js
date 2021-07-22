@@ -1,5 +1,5 @@
 import { SERVER_ADDRESS } from '../../components/requests';
-import { ADD_NEW_CHAT, ADD_NEW_MESSAGE } from './actions';
+import { ADD_NEW_CHAT, ADD_NEW_MESSAGE, SAVE_MY_CHATS } from './actions';
 
 
 const INITIAL_STATE = {
@@ -26,16 +26,7 @@ const INITIAL_STATE = {
             },
         ]
     },
-    myChats: [
-        {
-            name: "Гд Гошан Гошанович",
-            avatar: "https://cdn.discordapp.com/attachments/822098460643033140/862986762615783474/2021-06-28_173127.png",
-            carName: "Tayota Camri, 1917",
-            date: "09.07.2021",
-            messages: [],
-            _id: "60e80fd3dd33bf1488683042"
-        }
-    ],
+    myChats: [],
 };
 
 export const messages = (state = INITIAL_STATE, action) => {
@@ -68,6 +59,12 @@ export const messages = (state = INITIAL_STATE, action) => {
                     localStorage.setItem("user", JSON.stringify(data));
                     location.assign("http://localhost:4200/messages")
                 })
+            return state;
+        case SAVE_MY_CHATS:
+            state = {
+                ...state,
+                myChats: action.payload
+            };
             return state;
         default:
             return state;
