@@ -53,7 +53,6 @@ function App() {
                 <Route path="/recovery" className="page" id="Recovery"><Recovery/></Route>
                 <Route path="/auth" className="page" id="Authorization"><Authorization/></Route>
                 <Route path="/messages" className="page" id="Messages"><Messages/></Route>
-                <Route path="/chat"><Chat/></Route>
             </Switch>
         </Provider>
     </ApolloProvider>

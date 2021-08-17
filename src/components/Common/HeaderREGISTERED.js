@@ -35,7 +35,7 @@ function HeaderREGISTERED() {
                         <a href={ ADD_PATH }>Мои автомобили</a>
                         <a href={ MESSAGES_PATH }>Сообщения</a>
                     </nav>
-                    <div class="avatar">{ useSelector(state => state.authorization.user.email) }</div>
+                    <div className="avatar">{ useSelector(state => state.authorization.user.email) }</div>
                 </div>
                 <button className="burger">
                         <img id="burger" onClick={ showMobile } src="./assets/burger.svg" alt="menu"></img>
